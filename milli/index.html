@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="밀리의 서재 모션그래픽 프로젝트 상세 페이지" />
+  <title>밀리의 서재 — Motion / Video</title>
+  <link rel="stylesheet" href="milli.css" />
+</head>
+<body>
+  <header class="project-header">
+    <a class="brand-mark"
+      href="../../main/index.html"
+      onclick="sessionStorage.setItem('portfolioTarget', 'works')"
+      aria-label="포트폴리오 Works로 돌아가기">○</a>
+    <nav class="project-nav" aria-label="상세 페이지 내비게이션">
+      <a href="#overview">Overview</a>
+      <a href="#concept">Concept</a>
+      <a href="#scene-breakdown">Scenes</a>
+      <a href="#process">Process</a>
+      <a href="#final-cut">Final Cut</a>
+    </nav>
+    <a class="back-link" href="../../main/index.html"
+      onclick="sessionStorage.setItem('portfolioTarget', 'works')">
+      Back to Works ↗</a>
+  </header>
+
+  <main>
+    <section class="hero" id="top" aria-labelledby="project-title">
+      <div class="hero-meta reveal">
+        <p class="eyebrow">01 / MOTION · VIDEO</p>
+        <h1 id="project-title">밀리의 서재</h1>
+        <p class="hero-sub">MOTION / VIDEO · 24 SEC · 2026</p>
+      </div>
+
+      <div class="hero-screen reveal">
+        <!-- 최종 MP4를 assets/milli-final.mp4 이름으로 넣으면 바로 재생됩니다. -->
+        <video id="heroVideo" class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/scene-04.png">
+          <source src="assets/milli-final.mp4" type="video/mp4" />
+        </video>
+        <button class="hero-sound" id="heroSound" type="button">
+          SOUND ON ↗
+        </button>
+        <div class="hero-screen-overlay" aria-hidden="true">
+          <span>SCREENING 01</span>
+          <span>24 SEC</span>
+        </div>
+      </div>
+
+      <a class="scroll-cue" href="#overview">SCROLL TO PROCESS ↓</a>
+    </section>
+
+    <section class="section section-light overview" id="overview" aria-labelledby="overview-title">
+      <div class="section-heading reveal">
+        <span class="section-number">01</span>
+        <div>
+          <p class="eyebrow">PROJECT INFO</p>
+          <h2 id="overview-title">Overview</h2>
+        </div>
+      </div>
+
+      <div class="overview-grid reveal">
+        <article class="overview-card overview-card-wide">
+          <span class="info-label">Purpose</span>
+          <p>밀리의 서재의 다양한 독서 경험을 모션그래픽으로 소개</p>
+        </article>
+        <article class="overview-card">
+          <span class="info-label">Duration</span>
+          <p>2 Weeks</p>
+        </article>
+        <article class="overview-card">
+          <span class="info-label">Type</span>
+          <p>Personal Project</p>
+        </article>
+        <article class="overview-card overview-card-role">
+          <span class="info-label">Role</span>
+          <p>Planning · Design · Motion Graphics</p>
+        </article>
+        <article class="overview-card overview-card-wide tools-card">
+          <span class="info-label">Tools</span>
+          <div class="tool-row">
+            <div class="tool-item">
+              <strong>After Effects</strong>
+              <span>70%</span>
+              <small>Motion Graphics · Animation</small>
+            </div>
+            <div class="tool-item">
+              <strong>Illustrator</strong>
+              <span>20%</span>
+              <small>Audiobook & Book Page Graphics</small>
+            </div>
+            <div class="tool-item">
+              <strong>Photoshop</strong>
+              <span>10%</span>
+              <small>Book Cover & Background Editing</small>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section concept" id="concept" aria-labelledby="concept-title">
+      <div class="concept-copy reveal">
+        <p class="eyebrow">02 / CONCEPT</p>
+        <h2 id="concept-title">사람은 그대로,<br /><strong>독서는 자유롭게.</strong></h2>
+        <p class="concept-description">
+          책과 오디오북을 통해 상황에 따라 자신에게 편한 방식으로 독서를 즐길 수 있다는 점을 표현했습니다.
+        </p>
+        <div class="keyword-row" aria-label="핵심 키워드">
+          <span>READING</span>
+          <span>AUDIOBOOK</span>
+          <span>CHOICE</span>
+        </div>
+      </div>
+
+      <div class="concept-visual reveal">
+        <img src="assets/brand-logo-frame.png" alt="밀리의 서재 노란 배경과 로고가 보이는 장면" />
+        <div class="palette" aria-label="컬러 팔레트">
+          <div class="swatch swatch-yellow"><span>#FFEB60</span></div>
+          <div class="swatch swatch-black"><span>#111111</span></div>
+          <div class="swatch swatch-cream"><span>#FAF8EF</span></div>
+        </div>
+        <p class="mood">BRIGHT · FRIENDLY · RHYTHMIC</p>
+      </div>
+    </section>
+
+    <section class="section section-light scenes" id="scene-breakdown" aria-labelledby="scenes-title">
+      <div class="section-heading reveal">
+        <span class="section-number">03</span>
+        <div>
+          <p class="eyebrow">SCENE BREAKDOWN</p>
+          <h2 id="scenes-title">Frame by frame.</h2>
+        </div>
+        <p class="section-note">Click a frame to enlarge.</p>
+      </div>
+
+      <div class="scene-stack">
+        <article class="scene-card scene-left reveal">
+          <button class="scene-image-button" type="button" data-lightbox="assets/scene-01.png" aria-label="Scene 01 크게 보기">
+            <img src="assets/scene-01.png" alt="이번엔 책을 선택하는 장면" />
+          </button>
+          <div class="scene-copy">
+            <div class="scene-meta">
+              <span>00:03:22</span>
+              <h3>BOOK SELECTION</h3>
+            </div>
+            <p>책을 고르는 시작점을 타이포그래피와 표지 이미지로 제시했습니다.</p>
+          </div>
+        </article>
+
+        <article class="scene-card scene-right reveal">
+          <button class="scene-image-button" type="button" data-lightbox="assets/scene-02.png" aria-label="Scene 02 크게 보기">
+            <img src="assets/scene-02.png" alt="지금 끌리는 책을 고르는 장면" />
+          </button>
+          <div class="scene-copy">
+            <div class="scene-meta">
+              <span>00:09:08</span>
+              <h3>CURRENT PICK</h3>
+            </div>
+            <p>모바일 화면을 중심으로 지금 끌리는 책을 고르는 흐름을 보여줍니다.</p>
+          </div>
+        </article>
+
+        <article class="scene-card scene-left reveal">
+          <button class="scene-image-button" type="button" data-lightbox="assets/scene-03.png" aria-label="Scene 03 크게 보기">
+            <img src="assets/scene-03.png" alt="책 속 문장이 확대되어 독서에 몰입하는 장면" />
+          </button>
+          <div class="scene-copy">
+            <div class="scene-meta">
+              <span>00:14:26</span>
+              <h3>READING EXPERIENCE</h3>
+            </div>
+            <p>문장을 화면 가득 확대해 읽기에 몰입하는 순간을 강조했습니다.</p>
+          </div>
+        </article>
+
+        <article class="scene-card scene-right reveal">
+          <button class="scene-image-button" type="button" data-lightbox="assets/scene-04.png" aria-label="Scene 04 크게 보기">
+            <img src="assets/scene-04.png" alt="오디오북 콘텐츠가 입체적으로 펼쳐지는 장면" />
+          </button>
+          <div class="scene-copy">
+            <div class="scene-meta">
+              <span>00:19:08</span>
+              <h3>AUDIOBOOK</h3>
+            </div>
+            <p>오디오북 카드를 입체적으로 펼쳐 듣는 독서 방식을 시각화했습니다.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="key-message-block reveal" aria-labelledby="key-message-title">
+        <div class="key-message-header">
+          <div>
+            <span class="scene-time">00:25:22 → 00:26:16</span>
+            <h3 id="key-message-title">KEY MESSAGE</h3>
+            <p>영상의 핵심 메시지를 두 컷으로 나눠 마무리했습니다.</p>
+          </div>
+          <div class="slider-controls" aria-label="키 메시지 장면 이동">
+            <button type="button" class="slider-btn" data-slide-prev aria-label="이전 장면">←</button>
+            <span class="slide-count"><strong data-slide-current>01</strong> / 02</span>
+            <button type="button" class="slider-btn" data-slide-next aria-label="다음 장면">→</button>
+          </div>
+        </div>
+
+        <div class="key-message-slider" data-slider>
+          <button class="key-slide is-active" type="button" data-lightbox="assets/scene-05.png" aria-label="사람은 그대로 장면 크게 보기">
+            <img src="assets/scene-05.png" alt="사람은 그대로, 문구 장면" />
+          </button>
+          <button class="key-slide" type="button" data-lightbox="assets/scene-06.png" aria-label="독서는 자유롭게 장면 크게 보기">
+            <img src="assets/scene-06.png" alt="독서는 자유롭게. 문구 장면" />
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process" id="process" aria-labelledby="process-title">
+      <div class="section-heading section-heading-dark reveal">
+        <span class="section-number">04</span>
+        <div>
+          <p class="eyebrow">PROCESS</p>
+          <h2 id="process-title">문제를 다시 정의하고,<br />레이아웃을 다시 설계했습니다.</h2>
+        </div>
+      </div>
+
+      <div class="process-story reveal">
+        <article>
+          <span class="process-step">01 / INITIAL APPROACH</span>
+          <p>전체 흐름을 먼저 기획한 뒤 제작을 시작했습니다. 완성된 초안을 확인하며 화면이 다소 단조롭게 느껴졌고, 처음에는 <strong>텍스트의 부족이 원인이라고 판단해 타이포그래피 요소를 추가했습니다.</strong></p>
+        </article>
+        <article>
+          <span class="process-step">02 / FEEDBACK</span>
+          <p>그러나 피드백을 통해 <strong>레이아웃 변화가 적어 비슷한 화면이 오래 지속되고 있다는 점</strong>을 확인했습니다.</p>
+        </article>
+        <article>
+          <span class="process-step">03 / REDEFINE</span>
+          <p>문제의 핵심이 텍스트의 양이 아니라 <strong>반복되는 화면 구조</strong>에 있다는 것을 인지하고, 기존 레이아웃 안에서 요소를 추가하는 대신 장면 구성 자체를 다시 검토했습니다.</p>
+        </article>
+        <article>
+          <span class="process-step">04 / REBUILD</span>
+          <p>남은 작업 시간을 고려해 활용 가능한 기존 요소는 유지하면서, 변화가 필요한 장면은 <strong>레이아웃과 오브젝트 구성을 재설계해 화면의 리듬을 보완했습니다.</strong></p>
+        </article>
+      </div>
+
+      <div class="process-compare reveal">
+        <div class="compare-labels" aria-hidden="true">
+          <span>BEFORE</span><span>AFTER</span>
+        </div>
+        <div class="compare-grid compare-grid-two">
+          <button class="image-button" type="button" data-lightbox="assets/process-before-a.png" aria-label="첫 번째 수정 전 장면 크게 보기">
+            <img src="assets/process-before-a.png" alt="수정 전 폰과 헤드폰 레이아웃" />
+          </button>
+          <button class="image-button" type="button" data-lightbox="assets/process-after-a.png" aria-label="첫 번째 수정 후 장면 크게 보기">
+            <img src="assets/process-after-a.png" alt="수정 후 텍스트가 화면 전체를 차지하는 레이아웃" />
+          </button>
+        </div>
+        <p class="compare-caption">같은 오브젝트 안에서 요소를 더하기보다, 화면 전체의 구성과 시선 흐름을 바꾸는 방향으로 수정했습니다.</p>
+      </div>
+
+      <div class="process-compare reveal">
+        <div class="compare-labels compare-labels-wide" aria-hidden="true">
+          <span>BEFORE — VARIATIONS</span><span>AFTER</span>
+        </div>
+        <div class="compare-grid compare-grid-process">
+          <div class="before-pair">
+            <button class="image-button" type="button" data-lightbox="assets/process-before-b1.png" aria-label="두 번째 수정 전 글자 모션 장면 크게 보기">
+              <img src="assets/process-before-b1.png" alt="수정 전 글자가 흩어지는 장면" />
+            </button>
+            <button class="image-button" type="button" data-lightbox="assets/process-before-b2.png" aria-label="두 번째 수정 전 음파 장면 크게 보기">
+              <img src="assets/process-before-b2.png" alt="수정 전 헤드폰 음파 장면" />
+            </button>
+          </div>
+          <button class="image-button after-large" type="button" data-lightbox="assets/process-after-b.png" aria-label="두 번째 수정 후 오디오북 장면 크게 보기">
+            <img src="assets/process-after-b.png" alt="수정 후 오디오북 콘텐츠가 펼쳐지는 장면" />
+          </button>
+        </div>
+        <p class="compare-caption">모션의 변화만 주던 구간을 정리하고, 오디오북 콘텐츠 자체가 주인공이 되도록 레이아웃을 재구성했습니다.</p>
+      </div>
+    </section>
+
+    <section class="section final-cut" id="final-cut" aria-labelledby="final-title">
+      <div class="section-heading reveal">
+        <span class="section-number">05</span>
+        <div>
+          <p class="eyebrow">FINAL CUT</p>
+          <h2 id="final-title">Watch it again.</h2>
+        </div>
+      </div>
+
+      <div class="final-layout reveal">
+        <div class="final-video-wrap">
+          <!-- 같은 최종 MP4 파일을 사용합니다. -->
+          <video class="final-video" controls playsinline preload="metadata" poster="assets/scene-04.png">
+            <source src="assets/milli-final.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="reflection">
+          <span class="info-label">WHAT I LEARNED</span>
+          <p>
+            이번 작업을 통해 화면이 단조롭게 느껴질 때 단순히 요소를 추가하기보다, <strong>레이아웃과 장면 전환의 흐름 자체를 점검하는 것이 중요하다는 점</strong>을 배웠습니다. 피드백을 바탕으로 문제의 원인을 다시 정의하고 기존 구성을 재설계하며, 기획과 수정 과정의 중요성을 경험했습니다.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="project-footer">
+    <!-- PREV/NEXT 링크는 실제 프로젝트 파일명에 맞게 수정하면 됩니다. -->
+    <a href="#" class="project-skip project-skip-muted" aria-disabled="true">
+      <span>← PREV PROJECT</span>
+      <strong>COMING SOON</strong>
+    </a>
+    <a href="../../main/index.html"
+      onclick="sessionStorage.setItem('portfolioTarget', 'works')" class="back-to-works">BACK TO WORKS</a>
+    <a href="../leaflet/index.html" class="project-skip project-skip-muted project-skip-next" aria-disabled="true">
+      <span>NEXT PROJECT →</span>
+      <strong>COMING SOON</strong>
+    </a>
+  </footer>
+
+  <div class="lightbox" data-lightbox-root aria-hidden="true" role="dialog" aria-modal="true" aria-label="이미지 확대 보기">
+    <button class="lightbox-close" type="button" data-lightbox-close aria-label="확대 보기 닫기">×</button>
+    <img data-lightbox-image src="" alt="확대된 프로젝트 장면" />
+  </div>
+
+  <script src="milli.js"></script>
+</body>
+</html>
