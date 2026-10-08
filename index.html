@@ -1,235 +1,327 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
-
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Eunbi Portfolio</title>
-  <meta name="description" content="영상과 디자인으로 더 좋은 순간을 만드는 사람입니다." />
-  <script>
-    if (sessionStorage.getItem('portfolioTarget') === 'works') {
-      document.documentElement.classList.add('jump-to-works');
-    }
-  </script>
-
-  <style>
-    html.jump-to-works {
-      visibility: hidden;
-    }
-  </style>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="밀리의 서재 모션그래픽 프로젝트 상세 페이지" />
+  <title>밀리의 서재 — Motion / Video</title>
+  <link rel="stylesheet" href="milli.css" />
 </head>
-
-<body data-hero-final-ring="video">
-  <header class="site-header" id="siteHeader">
-    <!-- LOGO PLACEHOLDER: later swap this mark for your personal symbol / character icon -->
-    <a class="brand-mark" href="#top" aria-label="Home"><span></span></a>
-    <nav class="nav-links" aria-label="Primary">
-      <a href="#top">HOME</a>
-      <a href="#about">ABOUT</a>
-      <a href="#works">WORKS</a>
-      <a href="#contact">CONTACT</a>
+<body>
+  <header class="project-header">
+    <a class="brand-mark"
+      href="../../main/index.html"
+      onclick="sessionStorage.setItem('portfolioTarget', 'works')"
+      aria-label="포트폴리오 Works로 돌아가기">○</a>
+    <nav class="project-nav" aria-label="상세 페이지 내비게이션">
+      <a href="#overview">Overview</a>
+      <a href="#concept">Concept</a>
+      <a href="#scene-breakdown">Scenes</a>
+      <a href="#process">Process</a>
+      <a href="#final-cut">Final Cut</a>
     </nav>
+    <a class="back-link" href="../../main/index.html"
+      onclick="sessionStorage.setItem('portfolioTarget', 'works')">
+      Back to Works ↗</a>
   </header>
 
-  <main id="top">
-    <section class="hero">
-      <div class="hero-media" aria-hidden="true">
-        <!-- Replace hero-loop.mp4 with the final Flow clip later. Keep the same filename and no HTML edit is needed. -->
-        <video autoplay muted loop playsinline poster="assets/hero-still.png">
-          <source src="assets/표지 동영상.mp4" type="video/mp4" />
+  <main>
+    <section class="hero" id="top" aria-labelledby="project-title">
+      <div class="hero-meta reveal">
+        <p class="eyebrow">01 / MOTION · VIDEO</p>
+        <h1 id="project-title">밀리의 서재</h1>
+        <p class="hero-sub">MOTION / VIDEO · 24 SEC · 2026</p>
+      </div>
+
+      <div class="hero-screen reveal">
+        <!-- 최종 MP4를 assets/milli-final.mp4 이름으로 넣으면 바로 재생됩니다. -->
+        <video id="heroVideo" class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/scene-04.png">
+          <source src="assets/milli-final.mp4" type="video/mp4" />
         </video>
-        <img src="assets/hero-still.png" alt="" />
+        <button class="hero-sound" id="heroSound" type="button">
+          SOUND ON ↗
+        </button>
+        <div class="hero-screen-overlay" aria-hidden="true">
+          <span>SCREENING 01</span>
+          <span>24 SEC</span>
+        </div>
       </div>
-      <div class="hero-shade"></div>
-      <div class="hero-grain"></div>
-      <!-- Intro rings are web layers. With data-hero-final-ring="video", they roll in and fade into the ring already baked into the Flow clip. -->
-      <div class="focus-ring big"></div>
-      <div class="focus-ring small"></div>
-      <div class="hero-copy">
-        <div class="hero-kicker">MOTION · VIDEO · VISUAL DESIGN</div>
-        <h1 class="hero-title">PORTFOLIO</h1>
-        <p class="hero-desc">영상과 디자인으로 더 좋은 순간을 만드는 사람입니다.</p>
-      </div>
-      <div class="hero-meta"><span>SCENE 01</span><span>EST. 2026</span><span>SCROLL ↓</span></div>
-      <div class="hero-timeline"></div>
+
+      <a class="scroll-cue" href="#overview">SCROLL TO PROCESS ↓</a>
     </section>
 
-    <section class="profile" id="about">
-      <div class="profile-grid">
-        <aside class="portrait-wrap">
-          <div class="portrait">
-            <div class="portrait-symbol">○</div>
-          </div>
-        </aside>
+    <section class="section section-light overview" id="overview" aria-labelledby="overview-title">
+      <div class="section-heading reveal">
+        <span class="section-number">01</span>
         <div>
-          <div class="profile-head">
-            <div class="section-label">ABOUT / PROFILE</div>
-            <h2>Behind<br>the Scene.</h2>
-            <p>지금은 임시 내용과 임시 이미지로 구성한 프로필 골조입니다. 실제 정보와 자캐/사진이 준비되면 텍스트와 이미지만 교체할 수 있게 두었습니다.</p>
-          </div>
-
-          <dl class="credit-grid">
-            <div class="credit">
-              <dt>EDUCATION</dt>
-              <dd>High School<br>University</dd>
-            </div>
-            <div class="credit">
-              <dt>TRAINING</dt>
-              <dd>영상편집자 과정 · Academy</dd>
-            </div>
-            <div class="credit">
-              <dt>EXPERIENCE</dt>
-              <dd>THE VENTI · 4 YEARS</dd>
-            </div>
-            <div class="credit">
-              <dt>CERTIFICATE</dt>
-              <dd>Certificate 01<br>Certificate 02</dd>
-            </div>
-          </dl>
-
-          <div class="skills" id="skills">
-            <div class="skills-head"><span class="section-label">SKILLS / TIMELINE</span><small>HTML의 data-level 숫자만
-                수정</small></div>
-            <!-- data-level values below are TEMPORARY. Change only the number later. -->
-            <div class="skill" data-level="75"><span class="skill-name">PREMIERE PRO</span><span
-                class="skill-track"><span class="skill-fill"></span></span><span class="skill-value">0%</span></div>
-            <div class="skill" data-level="68"><span class="skill-name">AFTER EFFECTS</span><span
-                class="skill-track"><span class="skill-fill"></span></span><span class="skill-value">0%</span></div>
-            <div class="skill" data-level="82"><span class="skill-name">PHOTOSHOP</span><span class="skill-track"><span
-                  class="skill-fill"></span></span><span class="skill-value">0%</span></div>
-            <div class="skill" data-level="70"><span class="skill-name">ILLUSTRATOR</span><span
-                class="skill-track"><span class="skill-fill"></span></span><span class="skill-value">0%</span></div>
-          </div>
-
-          <div class="keywords">
-            <span class="keyword">FOCUS</span>
-            <span class="keyword">DETAIL</span>
-            <span class="keyword">MOTION</span>
-            <span class="keyword">STORY</span>
-          </div>
+          <p class="eyebrow">PROJECT INFO</p>
+          <h2 id="overview-title">Overview</h2>
         </div>
+      </div>
+
+      <div class="overview-grid reveal">
+        <article class="overview-card overview-card-wide">
+          <span class="info-label">Purpose</span>
+          <p>밀리의 서재의 다양한 독서 경험을 모션그래픽으로 소개</p>
+        </article>
+        <article class="overview-card">
+          <span class="info-label">Duration</span>
+          <p>2 Weeks</p>
+        </article>
+        <article class="overview-card">
+          <span class="info-label">Type</span>
+          <p>Personal Project</p>
+        </article>
+        <article class="overview-card overview-card-role">
+          <span class="info-label">Role</span>
+          <p>Planning · Design · Motion Graphics</p>
+        </article>
+        <article class="overview-card overview-card-wide tools-card">
+          <span class="info-label">Tools</span>
+          <div class="tool-row">
+            <div class="tool-item">
+              <strong>After Effects</strong>
+              <span>70%</span>
+              <small>Motion Graphics · Animation</small>
+            </div>
+            <div class="tool-item">
+              <strong>Illustrator</strong>
+              <span>20%</span>
+              <small>Audiobook & Book Page Graphics</small>
+            </div>
+            <div class="tool-item">
+              <strong>Photoshop</strong>
+              <span>10%</span>
+              <small>Book Cover & Background Editing</small>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
 
-    <section class="works" id="works" data-nav="light">
-      <div class="works-sticky">
-        <div class="works-title">
+    <section class="section concept" id="concept" aria-labelledby="concept-title">
+      <div class="concept-copy reveal">
+        <p class="eyebrow">02 / CONCEPT</p>
+        <h2 id="concept-title">사람은 그대로,<br /><strong>독서는 자유롭게.</strong></h2>
+        <p class="concept-description">
+          책과 오디오북을 통해 상황에 따라 자신에게 편한 방식으로 독서를 즐길 수 있다는 점을 표현했습니다.
+        </p>
+        <div class="keyword-row" aria-label="핵심 키워드">
+          <span>READING</span>
+          <span>AUDIOBOOK</span>
+          <span>CHOICE</span>
+        </div>
+      </div>
+
+      <div class="concept-visual reveal">
+        <img src="assets/brand-logo-frame.png" alt="밀리의 서재 노란 배경과 로고가 보이는 장면" />
+        <div class="palette" aria-label="컬러 팔레트">
+          <div class="swatch swatch-yellow"><span>#FFEB60</span></div>
+          <div class="swatch swatch-black"><span>#111111</span></div>
+          <div class="swatch swatch-cream"><span>#FAF8EF</span></div>
+        </div>
+        <p class="mood">BRIGHT · FRIENDLY · RHYTHMIC</p>
+      </div>
+    </section>
+
+    <section class="section section-light scenes" id="scene-breakdown" aria-labelledby="scenes-title">
+      <div class="section-heading reveal">
+        <span class="section-number">03</span>
+        <div>
+          <p class="eyebrow">SCENE BREAKDOWN</p>
+          <h2 id="scenes-title">Frame by frame.</h2>
+        </div>
+        <p class="section-note">Click a frame to enlarge.</p>
+      </div>
+
+      <div class="scene-stack">
+        <article class="scene-card scene-left reveal">
+          <button class="scene-image-button" type="button" data-lightbox="assets/scene-01.png" aria-label="Scene 01 크게 보기">
+            <img src="assets/scene-01.png" alt="이번엔 책을 선택하는 장면" />
+          </button>
+          <div class="scene-copy">
+            <div class="scene-meta">
+              <span>00:03:22</span>
+              <h3>BOOK SELECTION</h3>
+            </div>
+            <p>책을 고르는 시작점을 타이포그래피와 표지 이미지로 제시했습니다.</p>
+          </div>
+        </article>
+
+        <article class="scene-card scene-right reveal">
+          <button class="scene-image-button" type="button" data-lightbox="assets/scene-02.png" aria-label="Scene 02 크게 보기">
+            <img src="assets/scene-02.png" alt="지금 끌리는 책을 고르는 장면" />
+          </button>
+          <div class="scene-copy">
+            <div class="scene-meta">
+              <span>00:09:08</span>
+              <h3>CURRENT PICK</h3>
+            </div>
+            <p>모바일 화면을 중심으로 지금 끌리는 책을 고르는 흐름을 보여줍니다.</p>
+          </div>
+        </article>
+
+        <article class="scene-card scene-left reveal">
+          <button class="scene-image-button" type="button" data-lightbox="assets/scene-03.png" aria-label="Scene 03 크게 보기">
+            <img src="assets/scene-03.png" alt="책 속 문장이 확대되어 독서에 몰입하는 장면" />
+          </button>
+          <div class="scene-copy">
+            <div class="scene-meta">
+              <span>00:14:26</span>
+              <h3>READING EXPERIENCE</h3>
+            </div>
+            <p>문장을 화면 가득 확대해 읽기에 몰입하는 순간을 강조했습니다.</p>
+          </div>
+        </article>
+
+        <article class="scene-card scene-right reveal">
+          <button class="scene-image-button" type="button" data-lightbox="assets/scene-04.png" aria-label="Scene 04 크게 보기">
+            <img src="assets/scene-04.png" alt="오디오북 콘텐츠가 입체적으로 펼쳐지는 장면" />
+          </button>
+          <div class="scene-copy">
+            <div class="scene-meta">
+              <span>00:19:08</span>
+              <h3>AUDIOBOOK</h3>
+            </div>
+            <p>오디오북 카드를 입체적으로 펼쳐 듣는 독서 방식을 시각화했습니다.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="key-message-block reveal" aria-labelledby="key-message-title">
+        <div class="key-message-header">
           <div>
-            <div class="section-label">SELECTED WORKS / SCREENING</div>
-            <h2>Works</h2>
+            <span class="scene-time">00:25:22 → 00:26:16</span>
+            <h3 id="key-message-title">KEY MESSAGE</h3>
+            <p>영상의 핵심 메시지를 두 컷으로 나눠 마무리했습니다.</p>
           </div>
-          <p>SCROLL TO SCREEN →<br>CLICK TO PREVIEW</p>
+          <div class="slider-controls" aria-label="키 메시지 장면 이동">
+            <button type="button" class="slider-btn" data-slide-prev aria-label="이전 장면">←</button>
+            <span class="slide-count"><strong data-slide-current>01</strong> / 02</span>
+            <button type="button" class="slider-btn" data-slide-next aria-label="다음 장면">→</button>
+          </div>
         </div>
-        <div class="works-track" id="worksTrack">
-          <!-- 6 temporary slots: 3 video + 3 image. Duplicate cards later as needed. -->
-           <article class="work-card" tabindex="0" data-title="리플렛" data-category="EDITORIAL / PRINT"
-            data-desc="이미지 프로젝트는 목업을 크게 보여주고 여백에 간단한 프로젝트 설명을 배치하는 방향입니다." data-href="leaflet/index.html"
-            data-art="url('./assets/2인 리플렛.jpg') center / cover no-repeat">
-            <div class="work-frame">
-              <div class="work-art" style="--art:url('./assets/2인 리플렛.jpg') center / cover no-repeat"><span
-                  class="work-no">01 / IMAGE</span></div>
-            </div>
-            <div class="work-info"><span class="work-name">리플렛</span><span class="work-cat">EDITORIAL / PRINT</span></div>
-          </article>
-          <article class="work-card" tabindex="0" data-title="명함" data-category="PRINT / GRAPHIC"
-            data-desc="메인에서는 결과물을 우선 보여주고, VIEW PROJECT에서 기획·과정 페이지로 연결합니다." data-href="business-card/index.html"
-            data-art="url('./assets/명함.jpg') center / cover no-repeat">
-            <div class="work-frame">
-              <div class="work-art" style="--art:url('./assets/명함.jpg') center / cover no-repeat"><span
-                  class="work-no">02 / IMAGE</span></div>
-            </div>
-            <div class="work-info"><span class="work-name">명함</span><span class="work-cat">PRINT / GRAPHIC</span></div>
-          </article>
-          <article class="work-card" tabindex="0" data-title="카드뉴스" data-category="GRAPHIC DESIGN"
-            data-desc="작품 수가 늘면 이 article 블록을 복붙하고 텍스트·썸네일·링크만 변경하면 됩니다." data-href="cardnews/index.html"
-            data-art="url('./assets/카드뉴스_목업2.jpg') center / cover no-repeat">
-            <div class="work-frame">
-              <div class="work-art" style="--art:url('./assets/카드뉴스_목업2.jpg') center / cover no-repeat"><span
-                  class="work-no">03 / IMAGE</span></div>
-            </div>
-            <div class="work-info"><span class="work-name">카드뉴스</span><span class="work-cat">GRAPHIC
-                DESIGN</span></div>
-          </article>
-          <article class="work-card" tabindex="0" data-title="밀리의 서재" data-category="MOTION / VIDEO"
-            data-desc="완성 영상을 먼저 감상하고, 짧은 설명을 읽는 모달 자리입니다." data-href="milli/index.html"
-            data-art="url('./assets/milli-thumbnail.jpg') center / cover no-repeat"
-            data-video="./assets/milli-loop.mp4">
-            <div class="work-frame">
-              <div class="work-art" style="--art:url('./assets/milli-thumbnail.jpg') center / cover no-repeat">
-                <span
-                  class="work-no">04 / VIDEO</span>
-                <span class="play"></span>
-              </div>
-            </div>
-            <div class="work-info"><span class="work-name">밀리의 서재</span><span class="work-cat">MOTION / VIDEO</span>
-            </div>
-          </article>
-          <article class="work-card" tabindex="0" data-title="유튜브 '롤조각'" data-category="VIDEO EDITING"
-            data-desc="영상의 목적, 사용 툴, 핵심 포인트를 2–4줄 정도로 짧게 적는 영역입니다." data-href="#"
-            data-art="url('./assets/60초 Faker.jpg') center / cover no-repeat">
-            <div class="work-frame">
-              <div class="work-art" style="--art:url('./assets/60초 Faker.jpg') center / cover no-repeat"><span
-                  class="work-no">05 / VIDEO</span><span class="play"></span></div>
-            </div>
-            <div class="work-info"><span class="work-name">유튜브 숏폼 '롤조각'</span><span class="work-cat">VIDEO
-                EDITING</span></div>
-          </article>
-          <article class="work-card" tabindex="0" data-title="기업 브랜딩" data-category="BRAND FILM"
-            data-desc="실제 영상 썸네일과 링크가 준비되면 이 카드의 내용만 교체하면 됩니다." data-href="/yeobackrok/index.html"
-            data-art="url('./assets/여백록.jpg')  center / cover no-repeat">
-            <div class="work-frame">
-              <div class="work-art" style="--art:url('./assets/여백록.jpg')  center / cover no-repeat"><span
-                  class="work-no">06 / WEB</span></div>
-            </div>
-            <div class="work-info"><span class="work-name">기업 브랜딩</span><span class="work-cat">BRAND
-                FILM</span></div>
-          </article>
+
+        <div class="key-message-slider" data-slider>
+          <button class="key-slide is-active" type="button" data-lightbox="assets/scene-05.png" aria-label="사람은 그대로 장면 크게 보기">
+            <img src="assets/scene-05.png" alt="사람은 그대로, 문구 장면" />
+          </button>
+          <button class="key-slide" type="button" data-lightbox="assets/scene-06.png" aria-label="독서는 자유롭게 장면 크게 보기">
+            <img src="assets/scene-06.png" alt="독서는 자유롭게. 문구 장면" />
+          </button>
         </div>
-        <div class="works-progress"><span id="worksProgress"></span></div>
       </div>
     </section>
 
-    <section class="ending" id="contact" data-nav="light">
-      <div class="ending-sticky" id="endingSticky">
-        <div class="end-bg"></div>
-        <div class="contact-card">
-          <div class="section-label">CONTACT</div><a class="contact-email"
-            href="mailto:your@email.com">to_loving@naver.com</a>
+    <section class="section process" id="process" aria-labelledby="process-title">
+      <div class="section-heading section-heading-dark reveal">
+        <span class="section-number">04</span>
+        <div>
+          <p class="eyebrow">PROCESS</p>
+          <h2 id="process-title">문제를 다시 정의하고,<br />레이아웃을 다시 설계했습니다.</h2>
         </div>
-        <div class="black-curtain"></div>
-        <div class="end-word">END</div>
-        <div class="ing-word">-ing</div>
-        <div class="end-credit">2026 / EUNBI</div>
+      </div>
+
+      <div class="process-story reveal">
+        <article>
+          <span class="process-step">01 / INITIAL APPROACH</span>
+          <p>전체 흐름을 먼저 기획한 뒤 제작을 시작했습니다. 완성된 초안을 확인하며 화면이 다소 단조롭게 느껴졌고, 처음에는 <strong>텍스트의 부족이 원인이라고 판단해 타이포그래피 요소를 추가했습니다.</strong></p>
+        </article>
+        <article>
+          <span class="process-step">02 / FEEDBACK</span>
+          <p>그러나 피드백을 통해 <strong>레이아웃 변화가 적어 비슷한 화면이 오래 지속되고 있다는 점</strong>을 확인했습니다.</p>
+        </article>
+        <article>
+          <span class="process-step">03 / REDEFINE</span>
+          <p>문제의 핵심이 텍스트의 양이 아니라 <strong>반복되는 화면 구조</strong>에 있다는 것을 인지하고, 기존 레이아웃 안에서 요소를 추가하는 대신 장면 구성 자체를 다시 검토했습니다.</p>
+        </article>
+        <article>
+          <span class="process-step">04 / REBUILD</span>
+          <p>남은 작업 시간을 고려해 활용 가능한 기존 요소는 유지하면서, 변화가 필요한 장면은 <strong>레이아웃과 오브젝트 구성을 재설계해 화면의 리듬을 보완했습니다.</strong></p>
+        </article>
+      </div>
+
+      <div class="process-compare reveal">
+        <div class="compare-labels" aria-hidden="true">
+          <span>BEFORE</span><span>AFTER</span>
+        </div>
+        <div class="compare-grid compare-grid-two">
+          <button class="image-button" type="button" data-lightbox="assets/process-before-a.png" aria-label="첫 번째 수정 전 장면 크게 보기">
+            <img src="assets/process-before-a.png" alt="수정 전 폰과 헤드폰 레이아웃" />
+          </button>
+          <button class="image-button" type="button" data-lightbox="assets/process-after-a.png" aria-label="첫 번째 수정 후 장면 크게 보기">
+            <img src="assets/process-after-a.png" alt="수정 후 텍스트가 화면 전체를 차지하는 레이아웃" />
+          </button>
+        </div>
+        <p class="compare-caption">같은 오브젝트 안에서 요소를 더하기보다, 화면 전체의 구성과 시선 흐름을 바꾸는 방향으로 수정했습니다.</p>
+      </div>
+
+      <div class="process-compare reveal">
+        <div class="compare-labels compare-labels-wide" aria-hidden="true">
+          <span>BEFORE — VARIATIONS</span><span>AFTER</span>
+        </div>
+        <div class="compare-grid compare-grid-process">
+          <div class="before-pair">
+            <button class="image-button" type="button" data-lightbox="assets/process-before-b1.png" aria-label="두 번째 수정 전 글자 모션 장면 크게 보기">
+              <img src="assets/process-before-b1.png" alt="수정 전 글자가 흩어지는 장면" />
+            </button>
+            <button class="image-button" type="button" data-lightbox="assets/process-before-b2.png" aria-label="두 번째 수정 전 음파 장면 크게 보기">
+              <img src="assets/process-before-b2.png" alt="수정 전 헤드폰 음파 장면" />
+            </button>
+          </div>
+          <button class="image-button after-large" type="button" data-lightbox="assets/process-after-b.png" aria-label="두 번째 수정 후 오디오북 장면 크게 보기">
+            <img src="assets/process-after-b.png" alt="수정 후 오디오북 콘텐츠가 펼쳐지는 장면" />
+          </button>
+        </div>
+        <p class="compare-caption">모션의 변화만 주던 구간을 정리하고, 오디오북 콘텐츠 자체가 주인공이 되도록 레이아웃을 재구성했습니다.</p>
+      </div>
+    </section>
+
+    <section class="section final-cut" id="final-cut" aria-labelledby="final-title">
+      <div class="section-heading reveal">
+        <span class="section-number">05</span>
+        <div>
+          <p class="eyebrow">FINAL CUT</p>
+          <h2 id="final-title">Watch it again.</h2>
+        </div>
+      </div>
+
+      <div class="final-layout reveal">
+        <div class="final-video-wrap">
+          <!-- 같은 최종 MP4 파일을 사용합니다. -->
+          <video class="final-video" controls playsinline preload="metadata" poster="assets/scene-04.png">
+            <source src="assets/milli-final.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="reflection">
+          <span class="info-label">WHAT I LEARNED</span>
+          <p>
+            이번 작업을 통해 화면이 단조롭게 느껴질 때 단순히 요소를 추가하기보다, <strong>레이아웃과 장면 전환의 흐름 자체를 점검하는 것이 중요하다는 점</strong>을 배웠습니다. 피드백을 바탕으로 문제의 원인을 다시 정의하고 기존 구성을 재설계하며, 기획과 수정 과정의 중요성을 경험했습니다.
+          </p>
+        </div>
       </div>
     </section>
   </main>
 
-  <div class="modal" id="projectModal" aria-hidden="true">
-    <button class="modal-close" aria-label="Close">×</button>
-    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-      <a href="#" class="modal-visual" id="modalVisual" title="클릭하시면 상세 페이지로 연결됩니다.">
-        <video id="modalVideo" muted loop playsinline></video>
-      </a>
-      <div class="modal-copy">
-        <div>
-          <div class="modal-category" id="modalCategory"></div>
-          <h3 id="modalTitle"></h3>
-          <p id="modalDesc"></p>
-        </div><a href="#" class="view-project" id="viewProject">VIEW PROJECT ↗</a>
-      </div>
-    </div>
-  </div>
-  <div class="scroll-nav" id="scrollNav" aria-label="빠른 페이지 이동">
-    <button class="scroll-arrow scroll-arrow--up is-hidden" id="scrollUpBtn" type="button" aria-label="HOME으로 이동">
-      <span aria-hidden="true">↑</span>
-    </button>
-    <button class="scroll-arrow scroll-arrow--down" id="scrollDownBtn" type="button" aria-label="END로 이동">
-      <span aria-hidden="true">↓</span>
-    </button>
+  <footer class="project-footer">
+    <!-- PREV/NEXT 링크는 실제 프로젝트 파일명에 맞게 수정하면 됩니다. -->
+    <a href="#" class="project-skip project-skip-muted" aria-disabled="true">
+      <span>← PREV PROJECT</span>
+      <strong>COMING SOON</strong>
+    </a>
+    <a href="../../main/index.html"
+      onclick="sessionStorage.setItem('portfolioTarget', 'works')" class="back-to-works">BACK TO WORKS</a>
+    <a href="../leaflet/index.html" class="project-skip project-skip-muted project-skip-next" aria-disabled="true">
+      <span>NEXT PROJECT →</span>
+      <strong>COMING SOON</strong>
+    </a>
+  </footer>
+
+  <div class="lightbox" data-lightbox-root aria-hidden="true" role="dialog" aria-modal="true" aria-label="이미지 확대 보기">
+    <button class="lightbox-close" type="button" data-lightbox-close aria-label="확대 보기 닫기">×</button>
+    <img data-lightbox-image src="" alt="확대된 프로젝트 장면" />
   </div>
 
-  <script src="script.js" defer></script>
+  <script src="milli.js"></script>
 </body>
-
 </html>
