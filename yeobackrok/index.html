@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="카페 브랜드 여백록의 브랜딩 디자인 포트폴리오 콘텐츠 페이지" />
+  <title>여백록 | Branding Design</title>
+
+  <!-- Swiper 스타일 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.1.0/swiper-bundle.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div id="top"></div>
+
+  <a class="back-to-works"
+     href="../../main/index.html"
+     onclick="sessionStorage.setItem('portfolioTarget', 'works')"
+     aria-label="포트폴리오 Works로 돌아가기">BACK TO WORKS ↗</a>
+  <!-- 포트폴리오 사이트의 공통 상단 인터페이스/내비게이션은 의도적으로 제외 -->
+  <div id="smooth-wrapper">
+    <main id="smooth-content">
+      <div class="container">
+            <section id="main" class="section">
+                <div id="main_bg">
+                    <video id="back" autoplay muted loop playsinline>
+                        <source src="./로고.mp4">
+                    </video>
+                </div>
+            </section>
+      </div>
+
+      <!-- HERO -->
+      <section class="project-hero section-pad">
+        <div class="container hero-grid reveal-group">
+          <div class="hero-copy" data-reveal>
+            <p class="eyebrow">CAFE BRANDING · 2026</p>
+            <h1 class="hero-title">여백록</h1>
+            <p class="hero-en">YEOBACKROK</p>
+            <div class="hero-line" aria-hidden="true"></div>
+            <p class="hero-slogan">푸르름을 기록하고,<br />여백에 머물다.</p>
+            <p class="hero-desc">
+              도심 속 바쁜 일상 사이 잠시 비워내는 시간.<br />
+              자연과 일상 사이의 여백을 기록하는 카페 브랜드입니다.
+            </p>
+          </div>
+
+          <figure class="hero-visual media-frame" data-reveal>
+            <img
+              src="./assets/space-main.png"
+              alt="여백록 카페 전체적인 내부"
+              class="hero-slide active"
+            />
+
+            <img
+              src="./assets/space-seat.png"
+              alt="여백록 카페 좌석"
+              class="hero-slide"
+            />
+
+            <img
+              src="./assets/hero-exterior.png"
+              alt="여백록 카페 외관"
+              class="hero-slide"
+            />
+          </figure>
+        </div>
+      </section>
+
+      <!-- BRAND NOTE -->
+      <section class="brand-note section-pad section-soft">
+        <div class="container note-grid reveal-group">
+
+          <div class="note-copy" data-reveal>
+              <p class="eyebrow">01 · BRAND NOTE</p>
+              <h2>기록하고, 머물고,<br />다시 채우는 공간.</h2>
+              <p>
+                  여백록은 ‘여백’과 ‘기록’을 결합한 카페 브랜딩입니다.
+                  절제된 아이보리와 깊은 초록, 자연광과 식물의 결을 통해
+                  편안하지만 정돈된 인상을 만들었습니다.
+              </p>
+          </div>
+          <figure class="note-mark" data-reveal>
+              <img src="./assets/logo.png" alt="여백록 로고" />
+          </figure>
+        </div>
+      </section>
+
+      <!-- IDENTITY -->
+      <section class="identity section-pad">
+        <div class="container reveal-group">
+          <div class="section-head" data-reveal>
+            <div>
+              <p class="eyebrow">02 · BRAND IDENTITY</p>
+              <h2>고요한 여백 위에<br />초록을 기록하다.</h2>
+            </div>
+            <p class="section-desc">
+              로고의 곡선은 천천히 이어지는 기록의 흐름을,
+              원은 머무르는 한 순간을 상징합니다.
+            </p>
+          </div>
+
+          <div class="identity-grid">
+            <article class="identity-card identity-logo" data-reveal>
+              <p class="card-label">LOGO</p>
+              <img src="./assets/logo.png" alt="여백록 심볼과 워드마크" />
+            </article>
+
+            <article class="identity-card identity-colors" data-reveal>
+              <p class="card-label">COLOR PALETTE</p>
+              <div class="palette">
+                <div><span style="--chip:#213B2E"></span><small>#213B2E</small></div>
+                <div><span style="--chip:#92A797"></span><small>#92A797</small></div>
+                <div><span style="--chip:#E7ECE7"></span><small>#E7ECE7</small></div>
+                <div><span style="--chip:#FFFFFF"></span><small>#FFFFFF</small></div>
+                <div><span style="--chip:#EDEAE3"></span><small>#EDEAE3</small></div>
+                <div><span style="--chip:#C8A97A"></span><small>#C8A97A</small></div>
+              </div>
+            </article>
+
+            <article class="identity-card identity-type" data-reveal>
+              <p class="card-label">TYPOGRAPHY</p>
+              <p class="type-serif">Noto Serif KR</p>
+              <p class="type-sans">Pretendard / Sans-serif</p>
+              <div class="keyword-row">
+                <span>기록</span><span>여백</span><span>쉼</span><span>온도</span><span>자연</span><span>맑음</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 
+      <section class="signature section-pad section-deep">
+        <div class="container reveal-group">
+          <div class="section-head section-head-light" data-reveal>
+            <div>
+              <p class="eyebrow">03 · SIGNATURE</p>
+              <h2>여백을 닮은<br />시그니처 메뉴.</h2>
+            </div>
+            <p class="section-desc">
+              깊은 커피와 부드러운 크림, 담백한 디저트를
+              브랜드의 여백과 초록 포인트로 연결했습니다.
+            </p>
+          </div>
+
+          <div class="swiper signature-swiper" data-reveal>
+            <div class="swiper-wrapper">
+              <article class="swiper-slide signature-slide">
+                <div class="signature-image">
+                  <img src="./assets/signature-coffee.png" alt="여백 슈페너" />
+                </div>
+                <div class="signature-copy">
+                  <p class="slide-index">SIGNATURE 01</p>
+                  <h3>여백 슈페너</h3>
+                  <p class="slide-en">Yeoback Einspänner</p>
+                  <p>깊고 부드러운 에스프레소 위에 풍성한 우유 크림을 올린 여백록의 시그니처 커피.</p>
+                </div>
+              </article>
+
+              <article class="swiper-slide signature-slide">
+                <div class="signature-image">
+                  <img src="./assets/signature-financier.png" alt="여백 휘낭시에" />
+                </div>
+                <div class="signature-copy">
+                  <p class="slide-index">SIGNATURE 02</p>
+                  <h3>여백 휘낭시에</h3>
+                  <p class="slide-en">Yeoback Financier</p>
+                  <p>쌀의 담백함과 우유의 부드러움을 담아 밀크 글레이즈로 마무리한 시그니처 디저트.</p>
+                </div>
+              </article>
+
+              <article class="swiper-slide signature-slide">
+                <div class="signature-image signature-set-image">
+                  <img src="./assets/signature-set.png" alt="여백 세트" />
+                </div>
+                <div class="signature-copy">
+                  <p class="slide-index">YEOBACK SET</p>
+                  <h3>여백 세트</h3>
+                  <p class="slide-en">Record the Green, Stay in the Blank.</p>
+                  <p>커피와 디저트를 한 장면에 담아 여백록의 조용한 분위기를 완성한 대표 세트 비주얼.</p>
+                </div>
+              </article>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+ -->
+      <!-- APPLICATION -->
+      <section class="application section-pad">
+        <div class="container reveal-group">
+          <div class="section-head" data-reveal>
+            <div>
+              <p class="eyebrow">03 · APPLICATION</p>
+              <h2>브랜드의 여백을<br />손에 닿는 경험으로.</h2>
+            </div>
+            <p class="section-desc">
+              컵, 쇼핑백, 원두 패키지와 인쇄물까지 동일한 여백과 선의 규칙을 적용해
+              작은 접점에서도 여백록의 인상을 유지합니다.
+            </p>
+          </div>
+
+          <div class="application-grid">
+            <figure class="product-card product-portrait" data-reveal><img src="./assets/application-cup.png" alt="여백록 테이크아웃 컵" loading="lazy" /></figure>
+            <figure class="product-card product-portrait" data-reveal><img src="./assets/application-bag.png" alt="여백록 쇼핑백" loading="lazy" /></figure>
+            <figure class="product-card product-portrait" data-reveal><img src="./assets/application-beans.png" alt="여백록 원두 패키지" loading="lazy" /></figure>
+            <figure class="product-card product-landscape" data-reveal><img src="./assets/application-box.png" alt="여백록 패키지 박스" loading="lazy" /></figure>
+            <figure class="product-card product-landscape" data-reveal><img src="./assets/application-card.png" alt="여백록 인쇄물 디자인" loading="lazy" /></figure>
+            <figure class="product-card product-landscape" data-reveal><img src="./assets/application-sign.png" alt="여백록 외부 간판" loading="lazy" /></figure>
+            <figure class="product-card product-landscape" data-reveal><img src="./assets/로고_유리창.png" alt="여백록 유리창 로고" loading="lazy" /></figure>
+            <figure class="product-card product-portrait" data-reveal><img src="./assets/머그컵.png" alt="여백록 머그컵" loading="lazy" /></figure>
+            <figure class="product-card product-portrait product-glass" data-reveal><img src="./assets/application-glass.png" alt="여백록 유리컵" loading="lazy" /></figure>
+            <figure class="product-card product-portrait" data-reveal><img src="./assets/티코스터.png" alt="여백록 티코스터" loading="lazy" /></figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- SPACE -->
+      <section class="space section-pad section-soft">
+        <div class="container reveal-group">
+          <div class="section-head" data-reveal>
+            <div>
+              <p class="eyebrow">04 · SPACE & ATMOSPHERE</p>
+              <h2>자연광이 머무는<br />조용한 장면.</h2>
+            </div>
+            <p class="section-desc">
+              화이트와 우드, 식물과 햇빛을 중심으로 여백을 넓게 두어
+              머무는 시간 자체가 브랜드 경험이 되도록 구성했습니다.
+            </p>
+          </div>
+
+          <!-- 가로 사진은 동일한 16:9 비율로 맞춰 상·하단 라인을 통일 -->
+          <div class="space-gallery">
+            <figure class="space-card space-wide" data-reveal><img src="./assets/space-main.png" alt="여백록 카페 메인 공간" loading="lazy" /></figure>
+            <figure class="space-card" data-reveal><img src="./assets/space-bar.png" alt="여백록 바 카운터" loading="lazy" /></figure>
+            <figure class="space-card" data-reveal><img src="./assets/space-seat.png" alt="여백록 좌석 공간" loading="lazy" /></figure>
+            <figure class="space-card" data-reveal><img src="./assets/space-window.png" alt="여백록 창가 좌석" loading="lazy" /></figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- 
+      <section class="menu-showcase section-pad">
+        <div class="container menu-grid reveal-group">
+          <div class="menu-copy" data-reveal>
+            <p class="eyebrow">06 · MENU SYSTEM</p>
+            <h2>정보는 단정하게,<br />분위기는 그대로.</h2>
+            <p>
+              메뉴판은 여백을 충분히 확보하고 한글과 영문을 함께 배치해
+              브랜드의 차분한 인상을 유지하면서도 실제 주문 정보를 빠르게 읽을 수 있도록 정리했습니다.
+            </p>
+            <div class="menu-keywords">
+              <span>COFFEE</span><span>NON-COFFEE</span><span>TEA</span><span>DESSERT</span>
+            </div>
+          </div>
+
+          <figure class="menu-image media-frame" data-reveal>
+            <img src="./assets/menu.png" alt="여백록 전체 메뉴판 디자인" loading="lazy" />
+          </figure>
+        </div>
+      </section> -->
+
+      <!-- CLOSING -->
+      <section class="closing section-pad section-deep">
+        <div class="container closing-inner reveal-group">
+          <p class="eyebrow" data-reveal>YEOBACKROK · COFFEE & DESSERT</p>
+          <h2 data-reveal>푸르름을 기록하고,<br />여백에 머물다.</h2>
+          <p class="closing-en" data-reveal>Record the Green, Stay in the Blank.</p>
+          <div class="closing-mark" data-reveal aria-hidden="true"><span></span></div>
+        </div>
+      </section>
+
+      <!-- PROJECT NAVIGATION -->
+      <footer class="project-footer" id="page-end" aria-label="다른 프로젝트로 이동">
+        <div class="project-footer__grid">
+          <div class="project-footer__project project-footer__project--prev" aria-disabled="true">
+            <span>← PREV PROJECT</span>
+            <strong>COMING SOON</strong>
+          </div>
+
+          <a class="project-footer__top" href="#top">BACK TO TOP ↑</a>
+
+          <div class="project-footer__project project-footer__project--next" aria-disabled="true">
+            <span>NEXT PROJECT →</span>
+            <strong>COMING SOON</strong>
+          </div>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+
+  <div class="scroll-controls" aria-label="페이지 이동 버튼">
+    <button type="button" data-scroll="top" aria-label="페이지 맨 위로 이동">↑</button>
+    <button type="button" data-scroll="bottom" aria-label="페이지 맨 아래로 이동">↓</button>
+  </div>
+
+  <!-- Swiper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@14.1.0/swiper-bundle.min.js"></script>
+  <!-- GSAP 및 스크롤 플러그인 -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollSmoother.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
