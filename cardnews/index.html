@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="민생회복 소비쿠폰 2차 정보를 읽기 쉽게 구조화한 카드뉴스 디자인 프로젝트입니다." />
+  <title>Card News Design | Portfolio</title>
+  <link rel="stylesheet" href="cardnews.css" />
+</head>
+<body>
+  <div id="top" aria-hidden="true"></div>
+
+  <header class="hero" aria-labelledby="project-title">
+    <nav class="project-nav" aria-label="프로젝트 메뉴">
+      <a class="project-nav__mark" href="#top" aria-label="프로젝트 맨 위로 이동"><span></span></a>
+      <div class="project-nav__links">
+        <a href="#system">SYSTEM</a>
+        <a href="#gallery">GALLERY</a>
+        <a href="#final">FINAL</a>
+      </div>
+      <a class="project-nav__works" href="../../main/index.html" onclick="sessionStorage.setItem('portfolioTarget', 'works')">BACK TO WORKS ↗</a>
+    </nav>
+
+    <div class="hero__copy reveal">
+      <p class="eyebrow">GRAPHIC PROJECT · INFORMATION DESIGN</p>
+      <h1 id="project-title">CARD<br />NEWS</h1>
+      <p class="hero__en">6 CARDS · 2026</p>
+      <p class="hero__desc">복잡한 정책 정보를 쉽고 빠르게 전달할 수 있도록<br />정보를 구조화하고 시각적으로 정리한 카드뉴스입니다.</p>
+    </div>
+
+    <div class="hero__visual reveal reveal--delay" aria-label="카드뉴스 대표 이미지 3장">
+      <figure class="hero-card hero-card--left">
+        <img src="assets/card-5.png" alt="사용불가 업종 예시 카드" />
+      </figure>
+      <figure class="hero-card hero-card--right">
+        <img src="assets/card-4.png" alt="사용가능 업종 예시 카드" />
+      </figure>
+      <figure class="hero-card hero-card--front">
+        <img src="assets/card-1.png" alt="민생회복 소비쿠폰 2차 카드뉴스 표지" />
+      </figure>
+    </div>
+  </header>
+
+  <main>
+    <section class="section section--ivory system" id="system" aria-labelledby="system-title">
+      <div class="section__head reveal">
+        <p class="section__kicker">INFORMATION SYSTEM</p>
+        <div class="section__title-row">
+          <span class="section__number">01</span>
+          <h2 id="system-title">Typography &amp; Hierarchy</h2>
+        </div>
+        <p class="section__intro section__intro--dark">정보의 중요도에 따라 굵기와 크기를 나누고, 블루 계열의 구분색을 반복해 한 장 안에서도 읽는 순서가 자연스럽게 이어지도록 구성했습니다.</p>
+      </div>
+
+      <div class="system-layout">
+        <figure class="system-preview reveal">
+          <img src="assets/card-2.png" alt="지원내용, 신청 및 지급기간, 신청방식이 정리된 카드뉴스 2번" />
+          <figcaption>02 / INFORMATION CARD</figcaption>
+        </figure>
+
+        <div class="system-spec reveal">
+          <div class="type-family">
+            <p class="system-label">TYPEFACE</p>
+            <h3>Paperlogy</h3>
+            <p>4 Regular · 5 Medium · 6 SemiBold</p>
+          </div>
+
+          <div class="type-list" aria-label="카드뉴스 타이포그래피 사용 규칙">
+            <article class="type-row">
+              <div><span>01</span><strong>MAIN TITLE</strong></div>
+              <p class="type-sample type-sample--title">민생회복 소비쿠폰</p>
+              <p class="type-meta">6 SemiBold · 60 pt</p>
+            </article>
+            <article class="type-row">
+              <div><span>02</span><strong>SECTION LABEL</strong></div>
+              <p class="type-sample type-sample--label">지원내용</p>
+              <p class="type-meta">5 Medium · 33.7 pt · #9CC9FF</p>
+            </article>
+            <article class="type-row">
+              <div><span>03</span><strong>BODY / EMPHASIS</strong></div>
+              <p class="type-sample">국민의 90%에 대해 <b>1인당 10만원</b> 지급</p>
+              <p class="type-meta">4 Regular · 29 pt / 5 Medium · 30 pt</p>
+            </article>
+            <article class="type-row">
+              <div><span>04</span><strong>TABLE</strong></div>
+              <p class="type-sample"><b>온라인</b> · 전주시 사랑 상품권 앱</p>
+              <p class="type-meta">Title 5 Medium · 30 pt / Body 4 Regular · 28 pt</p>
+            </article>
+            <article class="type-row">
+              <div><span>05</span><strong>NOTE</strong></div>
+              <p class="type-sample type-sample--note">※ ‘찾아가는 신청’ 요청 시, 주민센터에서 방문하여 신청서 접수</p>
+              <p class="type-meta">4 Regular · 25 pt · #8E8E8E</p>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <div class="system-bottom reveal">
+        <div class="color-system">
+          <p class="system-label">COLOR ROLE</p>
+          <div class="color-role-list">
+            <div class="color-role">
+              <span class="color-chip" style="--chip:#9cc9ff"></span>
+              <div><strong>#9CC9FF</strong><p>Section label · Accent</p></div>
+            </div>
+            <div class="color-role">
+              <span class="color-chip" style="--chip:#bdd8f4"></span>
+              <div><strong>#BDD8F4</strong><p>Table header · Information group</p></div>
+            </div>
+            <div class="color-role">
+              <span class="color-chip color-chip--note" style="--chip:#8e8e8e"></span>
+              <div><strong>#8E8E8E</strong><p>Note · Secondary information</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reading-order">
+          <p class="system-label">READING ORDER</p>
+          <div class="reading-flow" aria-label="정보를 읽는 순서">
+            <span>TITLE</span><i>→</i><span>LABEL</span><i>→</i><span>BODY</span><i>→</i><span>TABLE</span><i>→</i><span>NOTE</span>
+          </div>
+          <p>제목에서 핵심 항목으로, 다시 상세 정보와 주석으로 시선이 내려가도록 정보 위계를 단계적으로 나눴습니다.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--dark" id="gallery" aria-labelledby="gallery-title">
+      <div class="section__head section__head--light reveal">
+        <p class="section__kicker">RESULT VIEWER</p>
+        <div class="section__title-row">
+          <span class="section__number">02</span>
+          <h2 id="gallery-title">Gallery View</h2>
+        </div>
+        <p class="section__intro">썸네일 또는 좌우 버튼을 눌러 여섯 장의 카드뉴스를 한 장씩 확인할 수 있습니다.</p>
+      </div>
+
+      <div class="gallery reveal" aria-live="polite">
+        <button class="gallery__arrow gallery__arrow--prev" type="button" aria-label="이전 카드">←</button>
+        <figure class="gallery__main">
+          <img id="galleryMain" src="assets/card-1.png" alt="카드뉴스 1번 표지" />
+          <figcaption><span id="galleryIndex">01</span><span>/ 06</span></figcaption>
+        </figure>
+        <button class="gallery__arrow gallery__arrow--next" type="button" aria-label="다음 카드">→</button>
+      </div>
+
+      <div class="gallery__thumbs reveal" aria-label="카드뉴스 썸네일 선택">
+        <button class="gallery__thumb is-active" type="button" data-index="0" aria-label="1번 카드 보기"><img src="assets/card-1.png" alt="" /></button>
+        <button class="gallery__thumb" type="button" data-index="1" aria-label="2번 카드 보기"><img src="assets/card-2.png" alt="" /></button>
+        <button class="gallery__thumb" type="button" data-index="2" aria-label="3번 카드 보기"><img src="assets/card-3.png" alt="" /></button>
+        <button class="gallery__thumb" type="button" data-index="3" aria-label="4번 카드 보기"><img src="assets/card-4.png" alt="" /></button>
+        <button class="gallery__thumb" type="button" data-index="4" aria-label="5번 카드 보기"><img src="assets/card-5.png" alt="" /></button>
+        <button class="gallery__thumb" type="button" data-index="5" aria-label="6번 카드 보기"><img src="assets/card-6.png" alt="" /></button>
+      </div>
+    </section>
+
+    <section class="section section--paper" id="final" aria-labelledby="final-title">
+      <div class="section__head reveal">
+        <p class="section__kicker">FINAL OVERVIEW</p>
+        <div class="section__title-row">
+          <span class="section__number">03</span>
+          <h2 id="final-title">Full Set</h2>
+        </div>
+        <p class="section__intro section__intro--dark">여섯 장을 한눈에 보며 전체 흐름과 반복되는 시각 요소의 통일감을 확인할 수 있습니다.</p>
+      </div>
+
+      <figure class="final-overview reveal">
+        <img src="assets/final-overview.png" alt="민생회복 소비쿠폰 2차 카드뉴스 6장 전체 구성" />
+      </figure>
+    </section>
+
+    <footer class="closing" id="page-end" aria-labelledby="closing-title">
+      <div class="closing__inner">
+        <div class="closing__center reveal">
+          <p class="closing__kicker">CARD NEWS DESIGN · 2026</p>
+          <h2 id="closing-title">Clear information,<br />organized visually.</h2>
+          <p class="closing__sub">복잡한 정보를 한눈에 읽을 수 있는 구조로 정리했습니다.</p>
+        </div>
+
+        <nav class="closing__projects" aria-label="다른 프로젝트로 이동">
+          <div class="closing__project closing__project--prev" aria-disabled="true">
+            <span>← PREV PROJECT</span>
+            <strong>COMING SOON</strong>
+          </div>
+
+          <a class="closing__top" href="#top">BACK TO TOP ↑</a>
+
+          <div class="closing__project closing__project--next" aria-disabled="true">
+            <span>NEXT PROJECT →</span>
+            <strong>COMING SOON</strong>
+          </div>
+        </nav>
+      </div>
+    </footer>
+  </main>
+
+  <div class="scroll-controls" aria-label="페이지 빠른 이동">
+    <button type="button" data-scroll="top" aria-label="페이지 맨 위로 이동">↑</button>
+    <button type="button" data-scroll="bottom" aria-label="페이지 맨 아래로 이동">↓</button>
+  </div>
+
+  <script src="cardnews.js"></script>
+</body>
+</html>
