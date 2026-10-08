@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="LG, Hanwha, Kurly의 브랜드 아이덴티티를 명함 디자인으로 재구성한 그래픽 디자인 프로젝트입니다." />
+  <title>Business Card Design | Portfolio</title>
+  <link rel="stylesheet" href="business-card.css" />
+</head>
+<body>
+  <div id="top" aria-hidden="true"></div>
+
+  <header class="hero" aria-labelledby="project-title">
+    <nav class="project-nav" aria-label="프로젝트 메뉴">
+      <a class="project-nav__mark" href="#top" aria-label="프로젝트 맨 위로 이동">
+        <span></span>
+      </a>
+      <div class="project-nav__links">
+        <a href="#overview">OVERVIEW</a>
+        <a href="#identity">IDENTITY</a>
+        <a href="#design">DESIGN</a>
+        <a href="#mockup">FINAL</a>
+      </div>
+      <a
+        class="project-nav__works"
+        href="../../main/index.html"
+        onclick="sessionStorage.setItem('portfolioTarget', 'works')"
+        aria-label="포트폴리오 Works로 돌아가기"
+      >
+        BACK TO WORKS ↗
+      </a>
+    </nav>
+
+    <div class="hero__copy reveal">
+      <h1 id="project-title">명함<br />디자인</h1>
+      <p class="hero__en">BUSINESS CARD DESIGN</p>
+    </div>
+
+    <figure class="hero__visual reveal reveal--delay">
+      <img src="assets/cover-business-cards.jpg" alt="LG, Hanwha, Kurly 명함 3종의 앞면과 뒷면을 함께 배치한 목업" />
+      <figcaption>
+        <span></span>
+        <span>LG · HANWHA · KURLY</span>
+      </figcaption>
+    </figure>
+  </header>
+
+  <main>
+    <section class="section section--ivory" id="overview" aria-labelledby="overview-title">
+      <div class="section__head reveal">
+        <p class="section__kicker">PROJECT INFO</p>
+        <div class="section__title-row">
+          <span class="section__number">01</span>
+          <h2 id="overview-title">Overview</h2>
+        </div>
+      </div>
+
+      <div class="overview-grid reveal">
+        <article class="overview-cell overview-cell--purpose">
+          <p class="cell-label">PURPOSE</p>
+          <p class="cell-value cell-value--ko">서로 다른 브랜드의 아이덴티티를 명함 디자인에 맞게 재구성</p>
+        </article>
+        <article class="overview-cell">
+          <p class="cell-label">DURATION</p>
+          <p class="cell-value">2 Days</p>
+        </article>
+        <article class="overview-cell">
+          <p class="cell-label">TYPE</p>
+          <p class="cell-value">Personal Project</p>
+        </article>
+        <article class="overview-cell overview-cell--role">
+          <p class="cell-label">ROLE</p>
+          <p class="cell-value">Graphic Design</p>
+        </article>
+        <article class="overview-cell overview-cell--tools">
+          <p class="cell-label">TOOLS</p>
+          <div class="tools">
+            <div class="tool">
+              <div class="tool__top"><strong>Illustrator</strong><span>90%</span></div>
+              <p>Business Card Design</p>
+            </div>
+            <div class="tool">
+              <div class="tool__top"><strong>Photoshop</strong><span>10%</span></div>
+              <p>Mockup Editing</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section--paper" id="identity" aria-labelledby="identity-title">
+      <div class="section__head reveal">
+        <p class="section__kicker">DESIGN DIRECTION</p>
+        <div class="section__title-row">
+          <span class="section__number">02</span>
+          <h2 id="identity-title">Brand Identity</h2>
+        </div>
+      </div>
+
+      <div class="identity-list">
+        <article class="identity identity--lg reveal">
+          <div class="identity__index">01</div>
+          <div class="identity__body">
+            <p class="identity__brand">LG ELECTRONICS</p>
+            <h3>정돈된 기업 이미지와 신뢰감</h3>
+            <p>브랜드의 정돈된 이미지를 바탕으로 로고와 슬로건을 활용해, 정보가 명확하게 읽히는 기업형 명함으로 구성했습니다.</p>
+          </div>
+          <div class="swatches" aria-label="LG 사용 색상">
+            <span style="--swatch:#c6004e"><b>#C6004E</b></span>
+            <span style="--swatch:#888888"><b>#888888</b></span>
+            <span class="swatch-light" style="--swatch:#ffffff"><b>#FFFFFF</b></span>
+          </div>
+        </article>
+
+        <article class="identity identity--hanwha reveal">
+          <div class="identity__index">02</div>
+          <div class="identity__body">
+            <p class="identity__brand">HANWHA</p>
+            <h3>심볼과 오렌지 컬러의 선명한 인상</h3>
+            <p>브랜드의 오렌지 컬러와 심볼을 적극적으로 활용해, 단순한 구성 안에서도 역동적이고 또렷한 인상이 남도록 디자인했습니다.</p>
+          </div>
+          <div class="swatches" aria-label="Hanwha 사용 색상">
+            <span style="--swatch:#ec7000"><b>#EC7000</b></span>
+            <span class="swatch-light" style="--swatch:#ffffff"><b>#FFFFFF</b></span>
+          </div>
+        </article>
+
+        <article class="identity identity--kurly reveal">
+          <div class="identity__index">03</div>
+          <div class="identity__body">
+            <p class="identity__brand">MARKET KURLY</p>
+            <h3>배송의 친근함을 더한 직관적 그래픽</h3>
+            <p>브랜드의 퍼플 컬러를 기반으로 배송을 연상시키는 택배 그래픽을 활용해, 다른 두 디자인보다 친근하면서도 직관적인 이미지를 강조했습니다.</p>
+          </div>
+          <div class="swatches" aria-label="Market Kurly 사용 색상">
+            <span style="--swatch:#c2afd3"><b>#C2AFD3</b></span>
+            <span style="--swatch:#4d256c"><b>#4D256C</b></span>
+            <span class="swatch-light" style="--swatch:#ffffff"><b>#FFFFFF</b></span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section--design" id="design" aria-labelledby="design-title">
+      <div class="section__head section__head--light reveal">
+        <p class="section__kicker">SELECTED DESIGN</p>
+        <div class="section__title-row">
+          <span class="section__number">03</span>
+          <h2 id="design-title">Business Card Design</h2>
+        </div>
+        <p class="section__intro">각 브랜드의 앞·뒤 디자인을 한 세트로 구성했습니다. 이미지를 클릭하면 크게 볼 수 있습니다.</p>
+      </div>
+
+      <div class="design-groups">
+        <article class="design-group reveal">
+          <div class="design-group__head">
+            <span>01</span>
+            <h3>LG ELECTRONICS</h3>
+            <p>Clean / Corporate / Trust</p>
+          </div>
+          <div class="card-pair">
+            <button class="card-shot" type="button" data-lightbox="assets/lg-front.jpg" data-caption="LG ELECTRONICS · FRONT">
+              <img src="assets/lg-front.jpg" alt="LG 명함 앞면 디자인" />
+              <span>FRONT ↗</span>
+            </button>
+            <button class="card-shot" type="button" data-lightbox="assets/lg-back.jpg" data-caption="LG ELECTRONICS · BACK">
+              <img src="assets/lg-back.jpg" alt="LG 명함 뒷면 디자인" />
+              <span>BACK ↗</span>
+            </button>
+          </div>
+        </article>
+
+        <article class="design-group reveal">
+          <div class="design-group__head">
+            <span>02</span>
+            <h3>HANWHA</h3>
+            <p>Symbol / Orange / Dynamic</p>
+          </div>
+          <div class="card-pair">
+            <button class="card-shot" type="button" data-lightbox="assets/hanwha-front.jpg" data-caption="HANWHA · FRONT">
+              <img src="assets/hanwha-front.jpg" alt="Hanwha 명함 앞면 디자인" />
+              <span>FRONT ↗</span>
+            </button>
+            <button class="card-shot" type="button" data-lightbox="assets/hanwha-back.jpg" data-caption="HANWHA · BACK">
+              <img src="assets/hanwha-back.jpg" alt="Hanwha 명함 뒷면 디자인" />
+              <span>BACK ↗</span>
+            </button>
+          </div>
+        </article>
+
+        <article class="design-group reveal">
+          <div class="design-group__head">
+            <span>03</span>
+            <h3>MARKET KURLY</h3>
+            <p>Friendly / Delivery / Intuitive</p>
+          </div>
+          <div class="card-pair">
+            <button class="card-shot" type="button" data-lightbox="assets/kurly-front.jpg" data-caption="MARKET KURLY · FRONT">
+              <img src="assets/kurly-front.jpg" alt="Market Kurly 명함 앞면 디자인" />
+              <span>FRONT ↗</span>
+            </button>
+            <button class="card-shot" type="button" data-lightbox="assets/kurly-back.jpg" data-caption="MARKET KURLY · BACK">
+              <img src="assets/kurly-back.jpg" alt="Market Kurly 명함 뒷면 디자인" />
+              <span>BACK ↗</span>
+            </button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section--mockup" id="mockup" aria-labelledby="mockup-title">
+      <div class="section__head reveal">
+        <p class="section__kicker">FINAL APPLICATION</p>
+        <div class="section__title-row">
+          <span class="section__number">04</span>
+          <h2 id="mockup-title">Final Mockup</h2>
+        </div>
+        <p class="section__intro section__intro--dark">동일한 공간감과 소재감 안에서 각 브랜드의 개성이 드러나도록 서로 다른 구도로 연출했습니다.</p>
+      </div>
+
+      <div class="mockup-stack">
+        <figure class="mockup-shot reveal">
+          <img src="./assets/mockup-lg.jpg" alt="대리석과 스톤 소재 위에 놓인 LG 명함 목업" />
+          <figcaption><span>01</span><strong>LG ELECTRONICS</strong></figcaption>
+        </figure>
+
+        <figure class="mockup-shot reveal">
+          <img src="assets/mockup-hanwha.jpg" alt="대리석과 스톤 소재 사이에 놓인 Hanwha 명함 목업" />
+          <figcaption><span>02</span><strong>HANWHA</strong></figcaption>
+        </figure>
+
+        <figure class="mockup-shot reveal">
+          <img src="assets/mockup-kurly.jpg" alt="대리석과 스톤 소재 사이에 놓인 Market Kurly 명함 목업" />
+          <figcaption><span>03</span><strong>MARKET KURLY</strong></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <footer class="closing" id="page-end" aria-labelledby="closing-title">
+      <div class="closing__inner">
+        <div class="closing__center reveal">
+          <p class="closing__kicker">BUSINESS CARD DESIGN · 2026</p>
+          <h2 id="closing-title">Designed to fit<br />each identity.</h2>
+          <p class="closing__sub">브랜드마다 다른 인상을, 작은 지면 안에 담았습니다.</p>
+        </div>
+
+        <nav class="closing__projects" aria-label="다른 프로젝트로 이동">
+          <div class="closing__project closing__project--prev" aria-disabled="true">
+            <span>← PREV PROJECT</span>
+            <strong>COMING SOON</strong>
+          </div>
+
+          <a class="closing__top" href="#top">
+            BACK TO TOP ↑
+          </a>
+
+          <div class="closing__project closing__project--next" aria-disabled="true">
+            <span>NEXT PROJECT →</span>
+            <strong>COMING SOON</strong>
+          </div>
+        </nav>
+      </div>
+    </footer>
+  </main>
+
+  <div class="scroll-nav" id="scrollNav" aria-label="페이지 빠른 이동">
+    <button
+      class="scroll-nav-btn is-hidden"
+      id="scrollUpBtn"
+      type="button"
+      aria-label="페이지 맨 위로 이동"
+    >
+      <span aria-hidden="true">↑</span>
+    </button>
+
+    <button
+      class="scroll-nav-btn"
+      id="scrollDownBtn"
+      type="button"
+      aria-label="페이지 마지막 내비게이션으로 이동"
+    >
+      <span aria-hidden="true">↓</span>
+    </button>
+  </div>
+
+  <dialog class="lightbox" id="lightbox" aria-label="명함 이미지 확대 보기">
+    <button class="lightbox__close" type="button" aria-label="확대 보기 닫기">×</button>
+    <button class="lightbox__nav lightbox__nav--prev" type="button" aria-label="이전 이미지">←</button>
+    <figure>
+      <img id="lightbox-image" src="" alt="" />
+      <figcaption id="lightbox-caption"></figcaption>
+    </figure>
+    <button class="lightbox__nav lightbox__nav--next" type="button" aria-label="다음 이미지">→</button>
+  </dialog>
+
+  <script src="business-card.js"></script>
+</body>
+</html>
