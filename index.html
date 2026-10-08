@@ -6,6 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Eunbi Portfolio</title>
   <meta name="description" content="영상과 디자인으로 더 좋은 순간을 만드는 사람입니다." />
+  <script>
+    if (sessionStorage.getItem('portfolioTarget') === 'works') {
+      document.documentElement.classList.add('jump-to-works');
+    }
+  </script>
+
+  <style>
+    html.jump-to-works {
+      visibility: hidden;
+    }
+  </style>
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -106,71 +117,73 @@
         <div class="works-title">
           <div>
             <div class="section-label">SELECTED WORKS / SCREENING</div>
-            <h2>Works.</h2>
+            <h2>Works</h2>
           </div>
           <p>SCROLL TO SCREEN →<br>CLICK TO PREVIEW</p>
         </div>
         <div class="works-track" id="worksTrack">
           <!-- 6 temporary slots: 3 video + 3 image. Duplicate cards later as needed. -->
-          <article class="work-card" tabindex="0" data-title="밀리의 서재" data-category="MOTION / VIDEO"
-            data-desc="완성 영상을 먼저 감상하고, 짧은 설명을 읽는 모달 자리입니다." data-href="#"
-            data-art="linear-gradient(135deg,#7e555d,#d8a7a6 45%,#47313a)">
+           <article class="work-card" tabindex="0" data-title="리플렛" data-category="EDITORIAL / PRINT"
+            data-desc="이미지 프로젝트는 목업을 크게 보여주고 여백에 간단한 프로젝트 설명을 배치하는 방향입니다." data-href="../상세 페이지/leaflet/index.html"
+            data-art="url('./assets/2인 리플렛.jpg') center / cover no-repeat">
             <div class="work-frame">
-              <div class="work-art" style="--art:linear-gradient(135deg,#7e555d,#d8a7a6 45%,#47313a)"><span
-                  class="work-no">01 / VIDEO</span><span class="ghost">01</span><span class="play"></span></div>
+              <div class="work-art" style="--art:url('./assets/2인 리플렛.jpg') center / cover no-repeat"><span
+                  class="work-no">01 / IMAGE</span></div>
+            </div>
+            <div class="work-info"><span class="work-name">리플렛</span><span class="work-cat">EDITORIAL / PRINT</span></div>
+          </article>
+          <article class="work-card" tabindex="0" data-title="명함" data-category="PRINT / GRAPHIC"
+            data-desc="메인에서는 결과물을 우선 보여주고, VIEW PROJECT에서 기획·과정 페이지로 연결합니다." data-href="../상세 페이지/business-card/index.html"
+            data-art="url('./assets/명함.jpg') center / cover no-repeat">
+            <div class="work-frame">
+              <div class="work-art" style="--art:url('./assets/명함.jpg') center / cover no-repeat"><span
+                  class="work-no">02 / IMAGE</span></div>
+            </div>
+            <div class="work-info"><span class="work-name">명함</span><span class="work-cat">PRINT / GRAPHIC</span></div>
+          </article>
+          <article class="work-card" tabindex="0" data-title="카드뉴스" data-category="GRAPHIC DESIGN"
+            data-desc="작품 수가 늘면 이 article 블록을 복붙하고 텍스트·썸네일·링크만 변경하면 됩니다." data-href="../상세 페이지/cardnews/index.html"
+            data-art="url('./assets/카드뉴스_목업2.jpg') center / cover no-repeat">
+            <div class="work-frame">
+              <div class="work-art" style="--art:url('./assets/카드뉴스_목업2.jpg') center / cover no-repeat"><span
+                  class="work-no">03 / IMAGE</span></div>
+            </div>
+            <div class="work-info"><span class="work-name">카드뉴스</span><span class="work-cat">GRAPHIC
+                DESIGN</span></div>
+          </article>
+          <article class="work-card" tabindex="0" data-title="밀리의 서재" data-category="MOTION / VIDEO"
+            data-desc="완성 영상을 먼저 감상하고, 짧은 설명을 읽는 모달 자리입니다." data-href="../상세 페이지/milli/index.html"
+            data-art="url('./assets/milli-thumbnail.jpg') center / cover no-repeat"
+            data-video="./assets/milli-loop.mp4">
+            <div class="work-frame">
+              <div class="work-art" style="--art:url('./assets/milli-thumbnail.jpg') center / cover no-repeat">
+                <span
+                  class="work-no">04 / VIDEO</span>
+                <span class="play"></span>
+              </div>
             </div>
             <div class="work-info"><span class="work-name">밀리의 서재</span><span class="work-cat">MOTION / VIDEO</span>
             </div>
           </article>
-          <article class="work-card" tabindex="0" data-title="Video Project 02" data-category="VIDEO EDITING"
+          <article class="work-card" tabindex="0" data-title="유튜브 '롤조각'" data-category="VIDEO EDITING"
             data-desc="영상의 목적, 사용 툴, 핵심 포인트를 2–4줄 정도로 짧게 적는 영역입니다." data-href="#"
-            data-art="linear-gradient(135deg,#181a22,#5d6073 52%,#b88785)">
+            data-art="url('./assets/60초 Faker.jpg') center / cover no-repeat">
             <div class="work-frame">
-              <div class="work-art" style="--art:linear-gradient(135deg,#181a22,#5d6073 52%,#b88785)"><span
-                  class="work-no">02 / VIDEO</span><span class="ghost">02</span><span class="play"></span></div>
+              <div class="work-art" style="--art:url('./assets/60초 Faker.jpg') center / cover no-repeat"><span
+                  class="work-no">05 / VIDEO</span><span class="play"></span></div>
             </div>
-            <div class="work-info"><span class="work-name">Video Project 02</span><span class="work-cat">VIDEO
+            <div class="work-info"><span class="work-name">유튜브 숏폼 '롤조각'</span><span class="work-cat">VIDEO
                 EDITING</span></div>
           </article>
-          <article class="work-card" tabindex="0" data-title="Video Project 03" data-category="BRAND FILM"
-            data-desc="실제 영상 썸네일과 링크가 준비되면 이 카드의 내용만 교체하면 됩니다." data-href="#"
-            data-art="linear-gradient(135deg,#6f796b,#b3a38e 48%,#4d3940)">
+          <article class="work-card" tabindex="0" data-title="기업 브랜딩" data-category="BRAND FILM"
+            data-desc="실제 영상 썸네일과 링크가 준비되면 이 카드의 내용만 교체하면 됩니다." data-href="../상세 페이지/yeobackrok/index.html"
+            data-art="url('./assets/여백록.jpg')  center / cover no-repeat">
             <div class="work-frame">
-              <div class="work-art" style="--art:linear-gradient(135deg,#6f796b,#b3a38e 48%,#4d3940)"><span
-                  class="work-no">03 / VIDEO</span><span class="ghost">03</span><span class="play"></span></div>
+              <div class="work-art" style="--art:url('./assets/여백록.jpg')  center / cover no-repeat"><span
+                  class="work-no">06 / WEB</span></div>
             </div>
-            <div class="work-info"><span class="work-name">Video Project 03</span><span class="work-cat">BRAND
+            <div class="work-info"><span class="work-name">기업 브랜딩</span><span class="work-cat">BRAND
                 FILM</span></div>
-          </article>
-          <article class="work-card" tabindex="0" data-title="Visual Project 01" data-category="BRANDING / IMAGE"
-            data-desc="이미지 프로젝트는 목업을 크게 보여주고 여백에 간단한 프로젝트 설명을 배치하는 방향입니다." data-href="#"
-            data-art="linear-gradient(145deg,#c08e94,#f0d6cc 55%,#8d6770)">
-            <div class="work-frame">
-              <div class="work-art" style="--art:linear-gradient(145deg,#c08e94,#f0d6cc 55%,#8d6770)"><span
-                  class="work-no">04 / IMAGE</span><span class="ghost">04</span></div>
-            </div>
-            <div class="work-info"><span class="work-name">Visual Project 01</span><span class="work-cat">BRANDING /
-                IMAGE</span></div>
-          </article>
-          <article class="work-card" tabindex="0" data-title="Visual Project 02" data-category="WEB / VISUAL"
-            data-desc="메인에서는 결과물을 우선 보여주고, VIEW PROJECT에서 기획·과정 페이지로 연결합니다." data-href="#"
-            data-art="linear-gradient(145deg,#d6c7b6,#837269 56%,#332f34)">
-            <div class="work-frame">
-              <div class="work-art" style="--art:linear-gradient(145deg,#d6c7b6,#837269 56%,#332f34)"><span
-                  class="work-no">05 / IMAGE</span><span class="ghost">05</span></div>
-            </div>
-            <div class="work-info"><span class="work-name">Visual Project 02</span><span class="work-cat">WEB /
-                VISUAL</span></div>
-          </article>
-          <article class="work-card" tabindex="0" data-title="Visual Project 03" data-category="GRAPHIC DESIGN"
-            data-desc="작품 수가 늘면 이 article 블록을 복붙하고 텍스트·썸네일·링크만 변경하면 됩니다." data-href="#"
-            data-art="linear-gradient(145deg,#4c3f47,#a67b86 50%,#e1b9b0)">
-            <div class="work-frame">
-              <div class="work-art" style="--art:linear-gradient(145deg,#4c3f47,#a67b86 50%,#e1b9b0)"><span
-                  class="work-no">06 / IMAGE</span><span class="ghost">06</span></div>
-            </div>
-            <div class="work-info"><span class="work-name">Visual Project 03</span><span class="work-cat">GRAPHIC
-                DESIGN</span></div>
           </article>
         </div>
         <div class="works-progress"><span id="worksProgress"></span></div>
@@ -195,8 +208,9 @@
   <div class="modal" id="projectModal" aria-hidden="true">
     <button class="modal-close" aria-label="Close">×</button>
     <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-      <a href="#" class="modal-visual" id="modalVisual" title="나중에 상세 프로젝트 페이지 주소를 여기에 연결"><span
-          id="modalNumber">01</span></a>
+      <a href="#" class="modal-visual" id="modalVisual" title="클릭하시면 상세 페이지로 연결됩니다.">
+        <video id="modalVideo" muted loop playsinline></video>
+      </a>
       <div class="modal-copy">
         <div>
           <div class="modal-category" id="modalCategory"></div>
@@ -206,6 +220,15 @@
       </div>
     </div>
   </div>
+  <div class="scroll-nav" id="scrollNav" aria-label="빠른 페이지 이동">
+    <button class="scroll-arrow scroll-arrow--up is-hidden" id="scrollUpBtn" type="button" aria-label="HOME으로 이동">
+      <span aria-hidden="true">↑</span>
+    </button>
+    <button class="scroll-arrow scroll-arrow--down" id="scrollDownBtn" type="button" aria-label="END로 이동">
+      <span aria-hidden="true">↓</span>
+    </button>
+  </div>
+
   <script src="script.js" defer></script>
 </body>
 
