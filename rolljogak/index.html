@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#111114" />
+  <meta name="description" content="롤조각 — 60초 페이커, 롤 입문자를 위한 선수 서사 숏폼 영상 편집 프로젝트" />
+  <title>롤조각 — 60초 페이커 | Video Editing</title>
+  <link rel="stylesheet" href="rolljogak.css" />
+</head>
+<body>
+  <header class="project-header" id="site-header">
+    <!-- GitHub Pages의 저장소 루트에 index.html이 있는 구조 기준 -->
+    <a class="brand-mark" href="../index.html" data-back-to-works aria-label="포트폴리오 Works로 돌아가기">○</a>
+    <nav class="project-nav" aria-label="상세 페이지 내비게이션">
+      <a href="#overview">Overview</a>
+      <a href="#storytelling">Story</a>
+      <a href="#process">Process</a>
+      <a href="#improvement">Improvement</a>
+      <a href="#final-cut">Final Cut</a>
+    </nav>
+      <a class="back-link" href="../../main/index.html"
+      onclick="sessionStorage.setItem('portfolioTarget', 'works')">Back to Works ↗</a>
+  </header>
+
+  <main>
+    <!-- HERO / 9:16 원본 영상. SOUND ON 시 처음부터 소리가 나며 재생됩니다. -->
+    <section class="hero" id="top" aria-labelledby="project-title">
+      <div class="hero-inner">
+        <div class="hero-meta reveal">
+          <p class="eyebrow"><span class="accent-tick" aria-hidden="true"></span> 01 / VIDEO EDITING · SHORTS</p>
+          <p class="hero-series">ROLLJOGAK / EP.01</p>
+          <h1 id="project-title">롤조각<span class="hero-title-dot">.</span></h1>
+          <p class="hero-korean">60초 페이커</p>
+          <p class="hero-description">60초에 담아낸<br />한 선수의 서사.</p>
+          <p class="hero-sub">VERTICAL VIDEO · 9:16 · 2026</p>
+        </div>
+
+        <div class="hero-media reveal">
+          <div class="hero-frame">
+            <!-- 영상 파일은 assets/faker-final.mp4 경로에 추가해주세요. -->
+            <video id="heroVideo" class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/faker-poster.jpg" aria-label="60초 페이커 완성 영상 미리보기">
+              <source src="assets/faker-final.mp4" type="video/mp4" />
+              브라우저가 MP4 재생을 지원하지 않습니다.
+            </video>
+            <div class="hero-video-top" aria-hidden="true"><span>SCREENING / 01</span><span>59 SEC</span></div>
+            <div class="video-missing" data-video-missing hidden></div>
+            <button class="hero-sound" id="heroSound" type="button" aria-pressed="false">SOUND ON ↗</button>
+          </div>
+          <p class="hero-media-foot"><span>PLAYER STORY / FAKER</span><span>SCROLL ↓</span></p>
+        </div>
+      </div>
+      <div class="hero-bottom-line" aria-hidden="true"><span>01 — PROJECT OPENING</span><span>2026</span></div>
+    </section>
+
+    <!-- 01 / OVERVIEW -->
+    <section class="section section-paper overview" id="overview" aria-labelledby="overview-title">
+      <div class="section-inner">
+        <div class="section-heading reveal">
+          <span class="section-number">01</span>
+          <div><p class="eyebrow">PROJECT INFO</p><h2 id="overview-title">Overview</h2></div>
+        </div>
+        <div class="overview-content reveal">
+          <div class="overview-lead">
+            <p class="eyebrow overview-mini">THE PROJECT</p>
+            <h3>60초에 담아낸<br /><em>한 선수의 서사.</em></h3>
+            <p>리그 오브 레전드 프로 선수들의 주요 순간을 선별하고, 내레이션과 컷 편집으로 하나의 이야기를 완성한 숏폼 영상 프로젝트입니다.</p>
+          </div>
+          <dl class="overview-details">
+            <div><dt>FORMAT</dt><dd>9:16 Shorts</dd></div>
+            <div><dt>ROLE</dt><dd>기획 · 편집</dd></div>
+            <div><dt>TOOL</dt><dd>Premiere Pro</dd></div>
+            <div><dt>SERIES</dt><dd>롤조각 / EP.01</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 / STORYTELLING -->
+    <section class="section storytelling" id="storytelling" aria-labelledby="storytelling-title">
+      <div class="section-inner">
+        <div class="section-heading section-heading-dark reveal">
+          <span class="section-number">02</span>
+          <div><p class="eyebrow">STORYTELLING</p><h2 id="storytelling-title">Four defining moments.</h2></div>
+          <p class="section-note">장면을 클릭하면 확대됩니다.</p>
+        </div>
+        <div class="story-intro reveal">
+          <p>한 선수의 커리어를 시간순으로 나열하기보다, <strong>도입 → 시련 → 성취 → 메시지</strong>로 이어지는 흐름을 구성했습니다.</p>
+          <span class="story-intro-aside">SELECTED SCENES / 04</span>
+        </div>
+        <div class="story-grid">
+          <article class="story-card reveal">
+            <button type="button" class="story-image image-zoom" data-lightbox="assets/story-intro.jpg" data-lightbox-title="INTRO / 선수의 목소리로 시작하다" aria-label="도입 장면 확대 보기">
+              <img src="assets/story-intro.jpg" loading="lazy" alt="60초 페이커 도입 장면. 선수 본인의 목소리와 함께 선수 얼굴이 등장한다." />
+              <span class="zoom-hint" aria-hidden="true">↗</span>
+            </button>
+            <div class="story-copy"><span class="story-index">01 / INTRO</span><h3>선수의 목소리로 시작하다.</h3><p>선수를 상징하는 문장을 본인의 목소리로 전달해, 시작부터 인물의 존재감을 강조했습니다.</p></div>
+          </article>
+          <article class="story-card reveal">
+            <button type="button" class="story-image image-zoom" data-lightbox="assets/story-conflict.jpg" data-lightbox-title="CONFLICT / 전설에게도 있었던 시련" aria-label="시련 장면 확대 보기">
+              <img src="assets/story-conflict.jpg" loading="lazy" alt="2022년 T1의 패배 장면. 페이커가 머리를 짚고 있는 모습이 등장한다." />
+              <span class="zoom-hint" aria-hidden="true">↗</span>
+            </button>
+            <div class="story-copy"><span class="story-index">02 / CONFLICT</span><h3>전설에게도 있었던 시련.</h3><p>오랜 우승 공백과 2022년의 패배를 통해, 화려한 기록 뒤에 있었던 좌절을 보여주었습니다.</p></div>
+          </article>
+          <article class="story-card reveal">
+            <button type="button" class="story-image image-zoom" data-lightbox="assets/story-comeback.jpg" data-lightbox-title="COMEBACK / 기다림 끝의 우승" aria-label="우승 장면 확대 보기">
+              <img src="assets/story-comeback.jpg" loading="lazy" alt="2023년 우승 트로피를 들어 올리는 T1 선수단 장면." />
+              <span class="zoom-hint" aria-hidden="true">↗</span>
+            </button>
+            <div class="story-copy"><span class="story-index">03 / COMEBACK</span><h3>기다림 끝의 우승.</h3><p>앞선 패배 장면과 2023년 우승 장면을 대비시켜, 오랜 기다림 끝에 찾아온 성취를 강조했습니다.</p></div>
+          </article>
+          <article class="story-card reveal">
+            <button type="button" class="story-image image-zoom" data-lightbox="assets/story-ending.jpg" data-lightbox-title="ENDING / 승패를 넘어 남는 기대" aria-label="엔딩 장면 확대 보기">
+              <img src="assets/story-ending.jpg" loading="lazy" alt="FAKER RE-SIGNS WITH T1 문구와 재계약 정보를 보여주는 영상 엔딩 장면." />
+              <span class="zoom-hint" aria-hidden="true">↗</span>
+            </button>
+            <div class="story-copy"><span class="story-index">04 / ENDING</span><h3>승패를 넘어 남는 기대.</h3><p>재계약 소식과 마지막 내레이션을 연결해, 결과를 넘어 계속해서 기대받는 선수라는 메시지로 마무리했습니다.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 / EDITING PROCESS: 기본 이미지는 타임라인, 클릭하면 전체 Premiere 화면 -->
+    <section class="section section-paper process" id="process" aria-labelledby="process-title">
+      <div class="section-inner">
+        <div class="section-heading reveal">
+          <span class="section-number">03</span>
+          <div><p class="eyebrow">EDITING PROCESS</p><h2 id="process-title">From raw cuts to final.</h2></div>
+        </div>
+        <div class="process-summary reveal">
+          <p>긴 경기 장면에서 핵심 순간을 추려 <strong>약 60초의 서사</strong>로 압축하고, 이후 자막·그래픽·사운드를 더해 완성도를 높였습니다.</p>
+          <div class="process-time"><span>02:16</span><span class="process-arrow" aria-label="에서">→</span><span class="process-time-final">00:59</span></div>
+        </div>
+        <div class="process-grid">
+          <article class="process-card reveal">
+            <div class="process-top"><span>01 / ROUGH CUT</span><span>02:16:15</span></div>
+            <button type="button" class="timeline-button image-zoom" data-lightbox="assets/workspace-rough.png" data-lightbox-title="ROUGH CUT / Premiere Pro 전체 작업 화면" aria-label="초기본 프리미어 전체 작업 화면 보기">
+              <img src="assets/timeline-rough.png" loading="lazy" alt="프리미어 프로 초기 편집본 타임라인. 길게 편집된 영상과 간단한 그래픽 트랙이 보인다." />
+              <span class="timeline-overlay" aria-hidden="true">VIEW FULL WORKSPACE ↗</span>
+            </button>
+            <h3>이야기의 뼈대를 만들다.</h3>
+            <p>초기 편집본에서 핵심 장면을 선별하고, 이야기의 흐름을 유지하며 약 60초로 압축했습니다.</p>
+          </article>
+          <article class="process-card reveal">
+            <div class="process-top"><span>02 / FINAL EDIT</span><span>00:59:50</span></div>
+            <button type="button" class="timeline-button image-zoom" data-lightbox="assets/workspace-final.png" data-lightbox-title="FINAL EDIT / Premiere Pro 전체 작업 화면" aria-label="최종본 프리미어 전체 작업 화면 보기">
+              <img src="assets/timeline-final.png" loading="lazy" alt="프리미어 프로 최종 편집본 타임라인. 자막·그래픽·오디오 트랙이 여러 층으로 구성되어 있다." />
+              <span class="timeline-overlay" aria-hidden="true">VIEW FULL WORKSPACE ↗</span>
+            </button>
+            <h3>편집으로 흐름을 완성하다.</h3>
+            <p>컷 전환과 내레이션의 타이밍을 조정하고, 자막·그래픽·사운드를 더해 최종 영상을 완성했습니다.</p>
+          </article>
+        </div>
+        <p class="process-note reveal">TIMELINE ONLY IN VIEW · CLICK TO EXPLORE THE WORKSPACE</p>
+      </div>
+    </section>
+
+    <!-- 04 / IMPROVEMENT: 별도 슬라이더 없이 두 편의 정지 이미지 직접 비교 -->
+    <section class="section improvement" id="improvement" aria-labelledby="improvement-title">
+      <div class="section-inner">
+        <div class="section-heading section-heading-dark reveal">
+          <span class="section-number">04</span>
+          <div><p class="eyebrow">IMPROVEMENT / EP.01 → EP.02</p><h2 id="improvement-title">Same format.<br /><em>Clearer information.</em></h2></div>
+        </div>
+        <div class="improvement-lead reveal">
+          <p>첫 번째 영상의 자막 구성은 유지하면서, 두 번째 영상에서는 <strong>팀별 진영 색상</strong>과 <strong>주인공의 소속팀을 표시하는 밑줄</strong>을 추가했습니다. 빠르게 전개되는 경기에서도 입문자가 선수와 팀의 관계를 쉽게 파악할 수 있도록 편집 방식을 조정했습니다.</p>
+        </div>
+        <div class="improvement-grid">
+          <article class="improvement-card reveal">
+            <div class="improvement-card-head"><span>01 / FAKER</span><span>FIRST EPISODE</span></div>
+            <button type="button" class="improvement-image image-zoom" data-lightbox="assets/compare-faker.jpg" data-lightbox-title="FAKER / 기본 정보 전달" aria-label="페이커편 자막 장면 확대 보기">
+              <img src="assets/compare-faker.jpg" loading="lazy" alt="페이커편: 검정색 상하단 영역에 흰색 자막과 T1 vs JDG 경기 정보가 표시된다." />
+              <span class="zoom-hint" aria-hidden="true">↗</span>
+            </button>
+            <div class="improvement-card-foot"><h3>기본 정보 전달</h3><p>흰색 중심으로 경기 정보와 내레이션을 제시했습니다.</p></div>
+          </article>
+          <article class="improvement-card reveal">
+            <div class="improvement-card-head"><span>02 / KIIN</span><span>SECOND EPISODE</span></div>
+            <button type="button" class="improvement-image image-zoom" data-lightbox="assets/compare-kiin.jpg" data-lightbox-title="KIIN / 경기 정보의 시각화" aria-label="기인편 자막 장면 확대 보기">
+              <img src="assets/compare-kiin.jpg" loading="lazy" alt="기인편: T1은 파란색, GEN은 분홍색으로 구분되며 GEN 소속 팀을 빨간 밑줄로 강조했다." />
+              <span class="zoom-hint" aria-hidden="true">↗</span>
+            </button>
+            <div class="improvement-card-foot"><h3>경기 정보의 시각화</h3><p>진영별 색상과 소속팀 밑줄로 선수와 팀의 관계를 더 쉽게 전달했습니다.</p></div>
+          </article>
+        </div>
+        <p class="improvement-outro reveal">작은 색상 표현의 변화가, 처음 보는 사람에게는 중요한 안내가 됩니다.</p>
+      </div>
+    </section>
+
+    <!-- 05 / FINAL CUT -->
+    <section class="section final-cut" id="final-cut" aria-labelledby="final-title">
+      <div class="section-inner">
+        <div class="section-heading reveal">
+          <span class="section-number">05</span>
+          <div><p class="eyebrow">FINAL CUT</p><h2 id="final-title">Watch it again.</h2></div>
+        </div>
+        <div class="final-layout reveal">
+          <div class="final-video-column">
+            <div class="final-video-stage">
+              <video id="finalVideo" class="final-video" controls playsinline preload="metadata" poster="assets/faker-poster.jpg" aria-label="60초 페이커 최종 영상">
+                <source src="assets/faker-final.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <span class="final-video-caption">ROLLJOGAK — 60 SEC FAKER / FINAL FILM</span>
+          </div>
+          <div class="reflection"><span class="info-label">WHAT I LEARNED</span><p>선수의 긴 커리어에서 이야기의 중심이 되는 순간을 선별하고, <strong>내레이션과 화면의 흐름을 조정하며 약 60초 안에 하나의 서사를 전달하는 과정</strong>을 경험했습니다.</p><div class="reflection-rule" aria-hidden="true"></div><span class="reflection-end">END OF PROJECT / 2026</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 마지막 화면은 블랙으로 마무리. 유튜브 채널 링크와 BACK TO TOP 제공 -->
+  <footer class="project-footer" id="page-end" aria-labelledby="closing-title">
+    <div class="footer-inner">
+      <div class="footer-message reveal">
+        <p class="footer-eyebrow">ROLLJOGAK · VIDEO EDITING · 2026</p>
+        <h2 id="closing-title">Stories beyond<br />the score.</h2>
+        <p class="footer-subtitle">승패 너머에 남는 이야기를, 60초 안에 담았습니다.</p>
+        <!-- 2026-09-09 대화에서 확정된 채널 핸들 @롤조각 기반 링크. 업로드 후 실제 연결 확인 권장 -->
+        <a class="footer-youtube-link" href="https://www.youtube.com/@%EB%A1%A4%EC%A1%B0%EA%B0%81" target="_blank" rel="noopener noreferrer" aria-label="롤조각 유튜브 채널 새 탭에서 열기">
+          ROLLJOGAK ON YOUTUBE <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+      <nav class="footer-projects" aria-label="프로젝트 이동">
+        <!-- 순서는 실제 WORKS 배열 확정 시 조정 가능합니다. -->
+        <a href="../milli/index.html" class="project-skip"><span>← PREV PROJECT</span><strong>밀리의 서재</strong></a>
+        <a href="#top" class="back-to-top">BACK TO TOP ↑</a>
+        <a href="../leaflet/index.html" class="project-skip project-skip-next"><span>NEXT PROJECT →</span><strong>리플렛</strong></a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- 명함 상세 페이지의 테두리 없는 ↑↓ 버튼 디자인을 참고 -->
+  <div class="scroll-nav" aria-label="페이지 빠른 이동">
+    <button class="scroll-nav-btn is-hidden" id="scrollUpBtn" type="button" aria-label="페이지 맨 위로 이동" aria-hidden="true" tabindex="-1"><span aria-hidden="true">↑</span></button>
+    <button class="scroll-nav-btn" id="scrollDownBtn" type="button" aria-label="페이지 마지막으로 이동"><span aria-hidden="true">↓</span></button>
+  </div>
+
+  <div class="lightbox" data-lightbox-root aria-hidden="true" role="dialog" aria-modal="true" aria-label="작업 이미지 확대 보기" tabindex="-1">
+    <button type="button" class="lightbox-close" data-lightbox-close aria-label="확대 보기 닫기">×</button>
+    <figure class="lightbox-figure"><img data-lightbox-image src="" alt="" /><figcaption data-lightbox-caption></figcaption></figure>
+    <span class="lightbox-help">ESC / CLICK OUTSIDE TO CLOSE</span>
+  </div>
+  <script src="rolljogak.js"></script>
+</body>
+</html>
