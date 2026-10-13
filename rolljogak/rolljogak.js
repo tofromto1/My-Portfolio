@@ -2,10 +2,19 @@
 // GitHub Pages: /rolljogak/index.html, /rolljogak/rolljogak.css,
 // /rolljogak/rolljogak.js, /rolljogak/assets/*
 
-// 새로고침 시 상단 시작 (명시적으로 앵커 이동한 경우는 그대로 유지)
-if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
-window.addEventListener('load', () => {
-  if (!location.hash) window.scrollTo(0, 0);
+// 새로고침 시 TOP 시작, 영상 로딩 중 스크롤 위치 유지
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  if (!location.hash) {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'instant'
+    });
+  }
 });
 
 // 메인 포트폴리오로 돌아가면 Works 섹션을 보여주도록 힌트 저장
