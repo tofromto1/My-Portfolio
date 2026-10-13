@@ -10,8 +10,9 @@
 <body>
   <header class="project-header">
     <a class="brand-mark"
-      href="#top"
-      aria-label="작품 위로 올라가기">○</a>
+      href="../../main/index.html"
+      onclick="sessionStorage.setItem('portfolioTarget', 'works')"
+      aria-label="포트폴리오 Works로 돌아가기">○</a>
     <nav class="project-nav" aria-label="상세 페이지 내비게이션">
       <a href="#overview">Overview</a>
       <a href="#concept">Concept</a>
@@ -19,7 +20,7 @@
       <a href="#process">Process</a>
       <a href="#final-cut">Final Cut</a>
     </nav>
-    <a class="back-link" href="../index.html"
+    <a class="back-link" href="../../main/index.html"
       onclick="sessionStorage.setItem('portfolioTarget', 'works')">
       Back to Works ↗</a>
   </header>
@@ -29,7 +30,7 @@
       <div class="hero-meta reveal">
         <p class="eyebrow">01 / MOTION · VIDEO</p>
         <h1 id="project-title">밀리의 서재</h1>
-        <p class="hero-sub">MOTION / VIDEO · 24 SEC · 2026</p>
+        <p class="hero-sub">MOTION / VIDEO · 30 SEC · 2026</p>
       </div>
 
       <div class="hero-screen reveal">
@@ -42,7 +43,7 @@
         </button>
         <div class="hero-screen-overlay" aria-hidden="true">
           <span>SCREENING 01</span>
-          <span>24 SEC</span>
+          <span>30 SEC</span>
         </div>
       </div>
 
@@ -303,16 +304,16 @@
   </main>
 
   <footer class="project-footer">
-    <!-- PREV/NEXT 링크는 실제 프로젝트 파일명에 맞게 수정하면 됩니다. -->
-    <a href="#" class="project-skip project-skip-muted" aria-disabled="true">
+    <a href="../cardnews/index.html" class="project-skip">
       <span>← PREV PROJECT</span>
-      <strong>COMING SOON</strong>
+      <strong>카드뉴스</strong>
     </a>
-    <a href="#"
-      onclick="sessionStorage.setItem('portfolioTarget', 'works')" class="back-to-works">BACK TO WORKS</a>
-    <a href="../leaflet/index.html" class="project-skip project-skip-muted project-skip-next" aria-disabled="true">
+    
+    <a href="#top" class="back-to-top">BACK TO TOP ↑</a>
+
+    <a href="../rolljogak/index.html" class="project-skip project-skip-next">
       <span>NEXT PROJECT →</span>
-      <strong>COMING SOON</strong>
+      <strong>유튜브 숏폼 <br> 롤조각</strong>
     </a>
   </footer>
 
@@ -321,6 +322,14 @@
     <img data-lightbox-image src="" alt="확대된 프로젝트 장면" />
   </div>
 
+  <div class="scroll-nav">
+    <button class="scroll-arrow scroll-up" aria-label="맨 위로 이동">
+      ↑
+    </button>
+    <button class="scroll-arrow scroll-down" aria-label="맨 아래로 이동">
+      ↓
+    </button>
+  </div>
   <script src="milli.js"></script>
 </body>
 </html>

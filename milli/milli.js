@@ -174,3 +174,42 @@ if (heroVideo && heroSound) {
     { passive: true }
   );
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const scrollUp = document.querySelector('.scroll-up');
+  const scrollDown = document.querySelector('.scroll-down');
+
+  if (!scrollUp || !scrollDown) {
+    console.warn('스크롤 버튼을 찾지 못했습니다.');
+    return;
+  }
+
+  scrollUp.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+
+  scrollDown.addEventListener('click', () => {
+    window.scrollTo({
+      top: document.documentElement.scrollHeight,
+      behavior: 'smooth'
+    });
+  });
+
+  function updateScrollNav() {
+    const atTop = window.scrollY < 100;
+    const atBottom =
+      window.innerHeight + window.scrollY >=
+      document.documentElement.scrollHeight - 20;
+
+    scrollUp.style.display = (atTop || atBottom) ? 'none' : 'grid';
+    scrollDown.style.display = atBottom ? 'none' : 'grid';
+  }
+
+  window.addEventListener('scroll', updateScrollNav, { passive: true });
+  window.addEventListener('resize', updateScrollNav);
+
+  updateScrollNav();
+});

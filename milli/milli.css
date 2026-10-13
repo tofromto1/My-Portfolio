@@ -1266,3 +1266,33 @@ button {
     width: 100% !important;
   }
 }
+
+/* 위아래 스크롤 버튼 */
+.scroll-nav {
+  position: fixed;
+  right: 28px;
+  bottom: 28px;
+  display: grid;
+  gap: 10px;
+  z-index: 100;
+}
+
+.scroll-arrow {
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: #f5f2ee;
+  color: #111113;
+  font-size: 22px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: background .25s, color .25s, transform .25s;
+}
+
+.scroll-arrow:hover {
+  background: #111113;
+  color: #fff;
+  transform: translateY(-2px);
+}
