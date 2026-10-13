@@ -81,7 +81,7 @@ body.intro-copy .hero-timeline{opacity:.7;transform:translateX(-50%) scaleX(1)}
 .hero-timeline::before{content:"";position:absolute;left:58%;top:-7px;width:1px;height:15px;background:#fff}
 
 /* ---------- PROFILE ---------- */
-.profile{position:relative;padding:clamp(110px,13vw,180px) var(--page-x);background:linear-gradient(180deg,#f4eae4 0%,#ead9d5 100%);min-height:100svh}
+.profile{position:relative;padding:clamp(110px,13vw,110px) var(--page-x);background:linear-gradient(180deg,#f4eae4 0%,#ead9d5 100%);min-height:100svh}
 .profile-grid{display:grid;grid-template-columns:minmax(260px,.78fr) 1.4fr;gap:clamp(45px,8vw,130px);align-items:start;max-width:1450px;margin:0 auto}
 .portrait-wrap{position:sticky;top:110px}
 .portrait{width: 80%; aspect-ratio:4/5;position:relative;overflow:hidden;background:linear-gradient(145deg,#dca9ab,#f4ded9 48%,#ba7e87);border-radius:2px;box-shadow:0 28px 70px rgba(87,58,63,.13)}
@@ -96,14 +96,14 @@ body.intro-copy .hero-timeline{opacity:.7;transform:translateX(-50%) scaleX(1)}
   transform-origin: center 10%;
 }
 
-.profile-head{padding-bottom:45px;border-bottom:1px solid var(--line)}
-.profile-head h2{font-family:"Bodoni MT",Didot,"Times New Roman",serif;font-size:clamp(50px,7vw,102px);line-height:.9;font-weight:400;letter-spacing:-.045em;margin:15px 0 24px}
+.profile-head{padding-bottom:20px;border-bottom:1px solid var(--line)}
+.profile-head h2{font-family:"Bodoni MT",Didot,"Times New Roman",serif;font-size:clamp(50px,7vw,90px);line-height:.9;font-weight:400;letter-spacing:-.045em;margin:15px 0 24px}
 .profile-head p{font-size:15px;line-height:1.85;color:var(--ink-soft);max-width:560px}
 .credit-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:45px;row-gap:0}
 .credit{padding:25px 0 26px;border-bottom:1px solid var(--line)}
 .credit dt{font-size:9px;letter-spacing:.23em;font-weight:800;opacity:.48;margin-bottom:10px}
 .credit dd{margin:0;font-size:14px;line-height:1.75}
-.skills{padding:48px 0 0}
+.skills{padding:30px 0 0}
 .skills-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:28px}
 .skills-head small{font-size:9px;letter-spacing:.16em;opacity:.46}
 .skill{display:grid;grid-template-columns:150px 1fr 48px;align-items:center;gap:16px;padding:14px 0}
@@ -112,7 +112,7 @@ body.intro-copy .hero-timeline{opacity:.7;transform:translateX(-50%) scaleX(1)}
 .skill-fill{position:absolute;left:0;top:0;height:100%;width:0;background:var(--rose-deep);transition:width 1.45s var(--ease)}
 .skill-fill::after{content:"";position:absolute;right:-1px;top:-5px;width:1px;height:13px;background:var(--rose-deep)}
 .skill-value{font-family:Georgia,serif;font-size:13px;text-align:right;color:var(--rose-deep)}
-.keywords{display:flex;flex-wrap:wrap;gap:8px;padding-top:44px}
+.keywords{display:flex;flex-wrap:wrap;gap:8px;padding-top:25px}
 .keyword{border:1px solid var(--line);padding:9px 13px;border-radius:999px;font-size:9px;letter-spacing:.14em;opacity:.7}
 
 /* ---------- WORKS ---------- */
