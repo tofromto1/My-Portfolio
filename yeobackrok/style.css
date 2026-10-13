@@ -381,6 +381,7 @@ figure, h1, h2, h3, p { margin: 0; }
 
 .project-footer__project {
   min-width: 0;
+  text-decoration: none;
 }
 
 .project-footer__project--next {
