@@ -251,3 +251,19 @@ body.intro-copy .hero-timeline{opacity:.7;transform:translateX(-50%) scaleX(1)}
   .contact-email{font-size:clamp(25px,8vw,42px)}
 }
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important}.hero-media{filter:none;transform:none}.focus-ring{transform:none!important;opacity:.65}.hero-copy,.hero-meta{opacity:1;transform:none}.site-header{opacity:1}.hero-timeline{opacity:.7;transform:translateX(-50%) scaleX(1)}.works{height:auto}.works-sticky{position:relative;height:auto}.works-track{transform:none!important;display:grid;grid-template-columns:repeat(2,1fr);width:auto}.work-card{width:auto}}
+
+
+/* 롤조각 모달 PC 전용 */
+@media (min-width: 821px) {
+  .modal-panel:has(#modalVideo[src*="faker-final"]) {
+    width: min(820px, 94vw);
+    grid-template-columns: 1.4fr 1fr;
+  }
+}
+
+.modal-visual:has(#modalVideo[src*="faker-final"]) #modalVideo {
+  width: auto;
+  height: min(65vh, 560px);
+  max-width: 100%;
+  object-fit: contain;
+}

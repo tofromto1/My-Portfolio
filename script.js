@@ -589,7 +589,6 @@ function openModal(card, index) {
 
 
 function closeModal() {
-
   modal.classList.remove('open');
 
   modal.setAttribute(
@@ -598,8 +597,9 @@ function closeModal() {
   );
 
   document.body.style.overflow = '';
-}
 
+  $('#modalVideo').pause();
+}
 
 $$('.work-card').forEach(
   (card, i) => {
