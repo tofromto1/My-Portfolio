@@ -96,12 +96,6 @@ body.intro-copy .hero-timeline{opacity:.7;transform:translateX(-50%) scaleX(1)}
   transform-origin: center 10%;
 }
 
-/*
-.portrait::before{content:"";position:absolute;width:57%;aspect-ratio:1;border:1px solid rgba(255,255,255,.65);border-radius:50%;left:50%;top:43%;transform:translate(-50%,-50%)}
-.portrait::after{content:"PROFILE IMAGE\A later : photo / character";white-space:pre;position:absolute;left:27px;bottom:25px;color:rgba(255,255,255,.82);font-size:10px;line-height:1.8;letter-spacing:.19em}
-.portrait-symbol{position:absolute;inset:0;display:grid;place-items:center;color:rgba(255,255,255,.82);font-family:Georgia,serif;font-size:clamp(46px,7vw,94px);font-style:italic;transform:translateY(-4%)}
-*/
-
 .profile-head{padding-bottom:45px;border-bottom:1px solid var(--line)}
 .profile-head h2{font-family:"Bodoni MT",Didot,"Times New Roman",serif;font-size:clamp(50px,7vw,102px);line-height:.9;font-weight:400;letter-spacing:-.045em;margin:15px 0 24px}
 .profile-head p{font-size:15px;line-height:1.85;color:var(--ink-soft);max-width:560px}
