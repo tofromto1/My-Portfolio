@@ -3,7 +3,8 @@ if ('scrollRestoration' in history) {
   history.scrollRestoration = 'manual';
 }
 
-window.addEventListener('pageshow', () => {
+// 페이지 로딩 중 늦은 HOME 복귀 방지
+window.addEventListener('DOMContentLoaded', () => {
   const target = sessionStorage.getItem('portfolioTarget');
 
   if (target === 'works') {
@@ -27,8 +28,13 @@ window.addEventListener('pageshow', () => {
     history.replaceState(null, '', location.pathname + location.search);
   }
 
-  window.scrollTo(0, 0);
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: 'instant'
+  });
 });
+
 
 
 const $ = (s, c = document) => c.querySelector(s);
