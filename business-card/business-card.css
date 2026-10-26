@@ -153,6 +153,7 @@ a { color: inherit; text-decoration: none; }
 }
 .hero__copy h1 {
   margin: 26px 0 20px;
+  margin-left: 100px;
   font-size: clamp(76px, 8vw, 130px);
   line-height: 1;
   letter-spacing: -.075em;
@@ -160,6 +161,7 @@ a { color: inherit; text-decoration: none; }
 }
 .hero__en {
   margin: 0;
+  margin-left: 100px;
   font: 500 clamp(16px, 1.5vw, 24px)/1.3 Georgia, "Times New Roman", serif;
   letter-spacing: .08em;
   opacity: .72;
@@ -169,16 +171,17 @@ a { color: inherit; text-decoration: none; }
   width: min(100%, 980px);
 }
 .hero__visual img {
+  padding-right: 100px;
   width: 100%;
   aspect-ratio: 16 / 10;
   object-fit: cover;
-  border: 1px solid rgba(255,255,255,.12);
 }
 .hero__visual figcaption {
   display: flex;
   justify-content: space-between;
   gap: 20px;
   padding-top: 12px;
+  padding-right: 100px;
   font-size: 10px;
   font-weight: 800;
   letter-spacing: .16em;
