@@ -909,9 +909,9 @@ button {
 
 .project-footer h2 {
   margin: 0;
-  font: 400 clamp(66px, 8.2vw, 132px)/.88 var(--serif);
-  line-height: .9
+  font: 400 clamp(48px, 6vw, 96px) / .88 var(--serif);
   letter-spacing: -.055em;
+  line-height: 1;
 }
 
 .project-footer__sub {
