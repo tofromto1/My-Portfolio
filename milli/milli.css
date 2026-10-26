@@ -344,7 +344,7 @@ button {
 .concept h2 {
   margin: 22px 0 26px;
   font-size: clamp(54px, 7.2vw, 116px);
-  line-height: 0.98;
+  line-height: 1.1;
   letter-spacing: -0.065em;
   font-weight: 400;
 }
@@ -1185,7 +1185,6 @@ button {
   padding-top: 14px;
   border-top: 1px solid rgba(255, 255, 255, 0.16);
   color: rgba(255, 255, 255, 0.76);
-  text-align: left;
   font-size: clamp(15px, 1.15vw, 17px);
   line-height: 1.72;
 }
