@@ -415,7 +415,7 @@ button {
   margin: 22px 0 0;
   font-family: var();
   font-size: clamp(48px, 6.2vw, 94px);
-  line-height: .98;
+  line-height: 1.5;
   letter-spacing: -.055em;
   font-weight: 400
 }
@@ -910,6 +910,7 @@ button {
 .project-footer h2 {
   margin: 0;
   font: 400 clamp(66px, 8.2vw, 132px)/.88 var(--serif);
+  line-height: .9
   letter-spacing: -.055em;
 }
 
