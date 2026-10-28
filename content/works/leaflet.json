@@ -1,0 +1,15 @@
+{
+  "id": "leaflet",
+  "title": "리플렛",
+  "category": "EDITORIAL / PRINT",
+  "description": "많은 정보를 한눈에 이해할 수 있도록 정리하고, 각 프로젝트의 특성에 맞춰 레이아웃을 구성했습니다.",
+  "image": "/My-Portfolio/assets/2인 리플렛.jpg",
+  "detail_url": "leaflet/index.html",
+  "kind": "IMAGE",
+  "video": "",
+  "year": "",
+  "tags": [],
+  "published": true,
+  "featured": true,
+  "order": 1
+}

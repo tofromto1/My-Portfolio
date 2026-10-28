@@ -1,0 +1,15 @@
+{
+  "id": "rolljogak",
+  "title": "유튜브 '롤조각'",
+  "category": "VIDEO EDITING",
+  "description": "리그 오브 레전드 입문자도 쉽게 이해할 수 있도록 프로 선수들의 이야기를 기획하고, 내레이션과 컷 편집을 통해 숏폼 콘텐츠로 제작했습니다.",
+  "image": "/My-Portfolio/assets/60초 Faker.jpg",
+  "detail_url": "rolljogak/index.html",
+  "kind": "VIDEO",
+  "video": "/My-Portfolio/assets/faker-final.mp4",
+  "year": "",
+  "tags": [],
+  "published": true,
+  "featured": true,
+  "order": 5
+}

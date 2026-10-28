@@ -1,0 +1,15 @@
+{
+  "id": "cardnews",
+  "title": "카드뉴스",
+  "category": "GRAPHIC DESIGN",
+  "description": "민생회복 소비쿠폰의 주요 정보를 체계적으로 구조화하고, 누구나 쉽게 이해할 수 있도록 디자인했습니다.",
+  "image": "/My-Portfolio/assets/카드뉴스_목업2.jpg",
+  "detail_url": "cardnews/index.html",
+  "kind": "IMAGE",
+  "video": "",
+  "year": "",
+  "tags": [],
+  "published": true,
+  "featured": true,
+  "order": 3
+}

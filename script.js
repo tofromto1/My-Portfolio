@@ -241,7 +241,7 @@ const scrollNav = $('#scrollNav');
 const scrollUpBtn = $('#scrollUpBtn');
 const scrollDownBtn = $('#scrollDownBtn');
 
-const workCards = $$('.work-card');
+const workCards = () => [...document.querySelectorAll('.work-card')];
 
 const reduceMotion =
   matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -295,9 +295,9 @@ function isInWorks() {
 function scrollWorksToStart() {
 
   // 모바일에서는 작품이 세로로 쌓임
-  if (innerWidth <= 820 && workCards.length) {
+  if (innerWidth <= 820 && workCards().length) {
 
-    workCards[0].scrollIntoView({
+    workCards()[0].scrollIntoView({
       behavior: reduceMotion ? 'auto' : 'smooth',
       block: 'center'
     });
@@ -316,11 +316,9 @@ function scrollWorksToStart() {
 function scrollWorksToEnd() {
 
   // 모바일
-  if (innerWidth <= 820 && workCards.length) {
+  if (innerWidth <= 820 && workCards().length) {
 
-    workCards[
-      workCards.length - 1
-    ].scrollIntoView({
+    workCards()[workCards().length - 1].scrollIntoView({
       behavior: reduceMotion ? 'auto' : 'smooth',
       block: 'center'
     });
@@ -607,31 +605,18 @@ function closeModal() {
   $('#modalVideo').pause();
 }
 
-$$('.work-card').forEach(
-  (card, i) => {
-
-    card.addEventListener(
-      'click',
-      () => openModal(card, i)
-    );
-
-    card.addEventListener(
-      'keydown',
-      e => {
-
-        if (
-          e.key === 'Enter' ||
-          e.key === ' '
-        ) {
-
-          e.preventDefault();
-
-          openModal(card, i);
-        }
-      }
-    );
+// Event delegation works for CMS-created cards as well as original fallback cards.
+track.addEventListener('click', event => {
+  const card = event.target.closest('.work-card');
+  if (card && track.contains(card)) openModal(card);
+});
+track.addEventListener('keydown', event => {
+  const card = event.target.closest('.work-card');
+  if (card && (event.key === 'Enter' || event.key === ' ')) {
+    event.preventDefault();
+    openModal(card);
   }
-);
+});
 
 
 closeBtn.addEventListener(
@@ -677,3 +662,74 @@ modal.addEventListener(
     }
   }
 );
+
+// Pages CMS writes individual JSON files; GitHub Actions publishes their aggregate.
+// Keep the original six HTML cards visible as a fallback if the aggregate cannot load.
+function sitePath(path) {
+  if (!path) return '';
+  if (/^(https?:)?\/\//i.test(path)) return path;
+  const sitePrefix = '/My-Portfolio/';
+  return path.startsWith(sitePrefix) ? './' + path.slice(sitePrefix.length) :
+    path.startsWith('/') ? path : './' + path.replace(/^\.\//, '');
+}
+
+function renderWorkCard(work, index) {
+  const card = document.createElement('article');
+  card.className = 'work-card';
+  card.tabIndex = 0;
+  card.dataset.title = work.title;
+  card.dataset.category = work.category || '';
+  card.dataset.desc = work.description || '';
+  card.dataset.href = sitePath(work.detail_url) || '#';
+  const image = sitePath(work.image);
+  const art = 'url(' + JSON.stringify(image) + ') center / cover no-repeat';
+  card.dataset.art = art;
+  if (work.video) card.dataset.video = sitePath(work.video);
+
+  const frame = document.createElement('div');
+  frame.className = 'work-frame';
+  const visual = document.createElement('div');
+  visual.className = 'work-art';
+  visual.style.setProperty('--art', art);
+  const number = document.createElement('span');
+  number.className = 'work-no';
+  number.textContent = String(index + 1).padStart(2, '0') + ' / ' + (work.kind || (work.video ? 'VIDEO' : 'IMAGE'));
+  visual.appendChild(number);
+  if (work.video) {
+    const play = document.createElement('span');
+    play.className = 'play';
+    visual.appendChild(play);
+  }
+  frame.appendChild(visual);
+  card.appendChild(frame);
+
+  const info = document.createElement('div');
+  info.className = 'work-info';
+  const title = document.createElement('span');
+  title.className = 'work-name';
+  title.textContent = work.title;
+  const category = document.createElement('span');
+  category.className = 'work-cat';
+  category.textContent = work.category || '';
+  info.append(title, category);
+  card.appendChild(info);
+  return card;
+}
+
+async function loadCmsWorks() {
+  try {
+    const response = await fetch('./data/works.json', { cache: 'no-cache' });
+    if (!response.ok) throw new Error('HTTP ' + response.status);
+    const list = await response.json();
+    if (!Array.isArray(list)) throw new Error('Invalid WORKS index');
+    const visible = list
+      .filter(work => work.published === true && work.featured === true)
+      .sort((a, b) => a.order - b.order || a.title.localeCompare(b.title, 'ko'));
+    track.replaceChildren(...visible.map(renderWorkCard));
+    configureWorks();
+    requestAnimationFrame(onScroll);
+  } catch (error) {
+    console.warn('Pages CMS WORKS index unavailable; keeping original cards.', error);
+  }
+}
+loadCmsWorks();

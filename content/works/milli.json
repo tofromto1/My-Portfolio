@@ -1,0 +1,15 @@
+{
+  "id": "milli",
+  "title": "밀리의 서재",
+  "category": "MOTION / VIDEO",
+  "description": "밀리의 서재가 제공하는 다양한 독서 경험을 시각적인 움직임과 화면 전환을 활용해 표현했습니다.",
+  "image": "/My-Portfolio/assets/milli-thumbnail.jpg",
+  "detail_url": "milli/index.html",
+  "kind": "VIDEO",
+  "video": "/My-Portfolio/assets/milli-loop.mp4",
+  "year": "",
+  "tags": [],
+  "published": true,
+  "featured": true,
+  "order": 4
+}

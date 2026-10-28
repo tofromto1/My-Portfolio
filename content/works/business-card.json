@@ -1,0 +1,15 @@
+{
+  "id": "business-card",
+  "title": "명함",
+  "category": "PRINT / GRAPHIC",
+  "description": "각 브랜드의 아이덴티티를 반영하여 브랜드의 특성이 드러나는 명함을 디자인했습니다.",
+  "image": "/My-Portfolio/assets/명함.jpg",
+  "detail_url": "business-card/index.html",
+  "kind": "IMAGE",
+  "video": "",
+  "year": "",
+  "tags": [],
+  "published": true,
+  "featured": true,
+  "order": 2
+}

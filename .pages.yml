@@ -1,0 +1,88 @@
+media:
+  - name: images
+    label: Portfolio images
+    input: assets
+    output: /My-Portfolio/assets
+    categories: [image]
+    rename: false
+  - name: videos
+    label: Portfolio videos
+    input: assets
+    output: /My-Portfolio/assets
+    categories: [video]
+    rename: false
+content:
+  - name: works
+    label: Works
+    type: collection
+    path: content/works
+    format: json
+    filename: "{fields.id}.json"
+    view:
+      primary: title
+      fields: [title, category, year, published, order]
+      search: [title, category, description, tags]
+      sort: [order, title, category, year, published]
+      default:
+        sort: order
+        order: asc
+    fields:
+      - name: id
+        label: Work ID (unique, lowercase)
+        type: string
+        required: true
+        pattern: "^[a-z0-9-]+$"
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: category
+        label: Category
+        type: select
+        required: true
+        options:
+          values: ["EDITORIAL / PRINT", "PRINT / GRAPHIC", "GRAPHIC DESIGN", "MOTION / VIDEO", "VIDEO EDITING", "BRAND FILM"]
+      - name: year
+        label: Year (optional)
+        type: string
+      - name: image
+        label: Thumbnail
+        type: image
+        required: true
+        options:
+          media: images
+      - name: description
+        label: Modal description
+        type: text
+      - name: tags
+        label: Tags
+        type: string
+        list: true
+      - name: detail_url
+        label: VIEW PROJECT URL
+        type: string
+      - name: video
+        label: Modal preview video (optional)
+        type: file
+        options:
+          media: videos
+          categories: [video]
+      - name: kind
+        label: Thumbnail badge
+        type: select
+        options:
+          values: [IMAGE, VIDEO, WEB]
+      - name: published
+        label: Published
+        type: boolean
+        default: true
+      - name: featured
+        label: Show on homepage
+        type: boolean
+        default: true
+      - name: order
+        label: Display order
+        type: number
+        required: true
+        options:
+          min: 0
